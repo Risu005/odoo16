@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_project_business_unit_report_wizard_form" model="ir.ui.view">
+        <field name="name">project.business.unit.report.wizard.form</field>
+        <field name="model">project.business.unit.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Business Unit Project Report">
+                <sheet>
+                    <group>
+                        <field name="business_unit_tag_id"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="action_print_report"
+                            string="Print PDF"
+                            type="object"
+                            class="btn-primary"/>
+
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_project_business_unit_report_wizard"
+            model="ir.actions.act_window">
+        <field name="name">Business Unit Project Report</field>
+        <field name="res_model">project.business.unit.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_project_business_unit_report"
+              name="Business Unit Project Report"
+              parent="project.menu_project_report"
+              action="action_project_business_unit_report_wizard"
+              sequence="30"/>
+
+</odoo>

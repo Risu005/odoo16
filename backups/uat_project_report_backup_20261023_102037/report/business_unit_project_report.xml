@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="paperformat_business_unit_project_report"
+            model="report.paperformat">
+        <field name="name">Business Unit Project Report - A3 Landscape</field>
+        <field name="default" eval="False"/>
+        <field name="format">A3</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="action_business_unit_project_report"
+            model="ir.actions.report">
+        <field name="name">Business Unit Project Report</field>
+        <field name="model">project.business.unit.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">project_report.report_business_unit_projects</field>
+        <field name="report_file">project_report.report_business_unit_projects</field>
+        <field name="paperformat_id" ref="paperformat_business_unit_project_report"/>
+        <field name="print_report_name">'Business Unit Project Report - %s' % (object.business_unit_tag_id.name or '')</field>
+    </record>
+
+    <template id="report_business_unit_projects">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="wizard">
+
+                <t t-set="lines" t-value="wizard.get_report_lines()"/>
+
+                <t t-set="report_date"
+                   t-value="context_timestamp(datetime.datetime.now()).date()"/>
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <style type="text/css">
+
+                            .bu-project-table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                table-layout: fixed;
+                                font-size: 8px;
+                            }
+
+                            .bu-project-table thead {
+                                display: table-header-group;
+                            }
+
+                            .bu-project-table tbody {
+                                display: table-row-group;
+                            }
+
+                            .bu-project-table th {
+                                border: 1px solid #555555;
+                                padding: 4px 3px;
+                                text-align: center;
+                                vertical-align: middle;
+                                background-color: #e7e6e6;
+                                font-weight: bold;
+                            }
+
+                            .bu-project-table td {
+                                border: 1px solid #777777;
+                                padding: 4px 3px;
+                                vertical-align: top;
+                                overflow-wrap: break-word;
+                                word-wrap: break-word;
+                            }
+
+                            .bu-report-title {
+                                margin: 0 0 5px 0;
+                                color: #009b3a;
+                                font-size: 20px;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+
+                            .bu-report-information {
+                                margin-bottom: 10px;
+                                font-size: 11px;
+                                text-align: center;
+                            }
+
+                            .bu-text-center {
+                                text-align: center;
+                            }
+
+                            .bu-pending-actions {
+                                background-color: #fff86b;
+                            }
+
+                            .bu-action-item {
+                                margin-bottom: 4px;
+                            }
+
+                        </style>
+
+                        <!--
+                            Report title block. This sits outside the table so
+                            it prints once, on the first page only. The company
+                            logo and address come from web.external_layout and
+                            are drawn by wkhtmltopdf inside the top margin on
+                            every page, which is why margin_top / header_spacing
+                            on the paperformat must reserve enough room for it.
+                        -->
+                        <div class="bu-report-title">
+                            BUSINESS UNIT PROJECT REPORT
+                        </div>
+
+                        <div class="bu-report-information">
+
+                            <strong>Business Unit:</strong>
+
+                            <span t-esc="
+                                wizard.business_unit_tag_id.name
+                            "/>
+
+                            <span style="margin-left: 18px;">
+                                <strong>Report Date:</strong>
+                            </span>
+
+                            <span t-esc="
+                                report_date.strftime(
+                                    '%d.%m.%Y'
+                                )
+                            "/>
+
+                        </div>
+
+                        <table class="bu-project-table">
+
+                            <!--
+                                Only the column headings repeat on every page.
+                                Widths are tuned so the identification columns
+                                stay narrow and the action points column, which
+                                carries almost all of the text, gets a third of
+                                the page.
+                            -->
+                            <thead>
+
+                                <tr>
+
+                                    <th style="width: 3%;">
+                                        S/N
+                                    </th>
+
+                                    <th style="width: 6%;">
+                                        Project Type
+                                    </th>
+
+                                    <th style="width: 7%;">
+                                        Project ID
+                                    </th>
+
+                                    <th style="width: 10%;">
+                                        Customer Name
+                                    </th>
+
+                                    <th style="width: 13%;">
+                                        Project Name
+                                    </th>
+
+                                    <th style="width: 5%;">
+                                        BU
+                                    </th>
+
+                                    <th style="width: 6%;">
+                                        Start Date
+                                    </th>
+
+                                    <th style="width: 6%;">
+                                        Close Date
+                                    </th>
+
+                                    <th style="width: 5%;">
+                                        Days Taken
+                                    </th>
+
+                                    <th style="width: 5%;">
+                                        Days Left
+                                    </th>
+
+                                    <th style="width: 34%;">
+                                        Pending Action Points
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <t t-if="lines">
+
+                                    <tr t-foreach="lines"
+                                        t-as="line">
+
+                                        <!-- Serial number -->
+                                        <td class="bu-text-center">
+                                            <span t-esc="
+                                                line_index + 1
+                                            "/>
+                                        </td>
+
+                                        <!-- Project type -->
+                                        <td>
+                                            <span t-esc="
+                                                line['project_type']
+                                            "/>
+                                        </td>
+
+                                        <!-- Project ID -->
+                                        <td>
+                                            <span t-esc="
+                                                line['project_id']
+                                            "/>
+                                        </td>
+
+                                        <!-- Customer -->
+                                        <td>
+                                            <span t-esc="
+                                                line['customer_name']
+                                            "/>
+                                        </td>
+
+                                        <!-- Project name -->
+                                        <td>
+                                            <span t-esc="
+                                                line['project_name']
+                                            "/>
+                                        </td>
+
+                                        <!-- Business unit -->
+                                        <td>
+                                            <span t-esc="
+                                                line['business_unit']
+                                            "/>
+                                        </td>
+
+                                        <!-- Start date -->
+                                        <td class="bu-text-center">
+
+                                            <span t-if="
+                                                line['start_date']
+                                            "
+                                            t-esc="
+                                                line['start_date'].strftime(
+                                                    '%d.%m.%Y'
+                                                )
+                                            "/>
+
+                                            <span t-else="">
+                                                -
+                                            </span>
+
+                                        </td>
+
+                                        <!-- Close date -->
+                                        <td class="bu-text-center">
+
+                                            <span t-if="
+                                                line['close_date']
+                                            "
+                                            t-esc="
+                                                line['close_date'].strftime(
+                                                    '%d.%m.%Y'
+                                                )
+                                            "/>
+
+                                            <span t-else="">
+                                                -
+                                            </span>
+
+                                        </td>
+
+                                        <!-- Days taken -->
+                                        <td class="bu-text-center">
+
+                                            <span t-if="
+                                                line['days_taken'] != ''
+                                            "
+                                            t-esc="
+                                                line['days_taken']
+                                            "/>
+
+                                            <span t-else="">
+                                                -
+                                            </span>
+
+                                        </td>
+
+                                        <!-- Days remaining -->
+                                        <td class="bu-text-center">
+
+                                            <span t-if="
+                                                line['days_left'] != ''
+                                            "
+                                            t-esc="
+                                                line['days_left']
+                                            "/>
+
+                                            <span t-else="">
+                                                -
+                                            </span>
+
+                                        </td>
+
+                                        <!-- Pending action points -->
+                                        <td class="bu-pending-actions">
+
+                                            <t t-if="
+                                                line['pending_tasks']
+                                            ">
+
+                                                <div t-foreach="
+                                                    line['pending_tasks']
+                                                "
+                                                t-as="task"
+                                                class="bu-action-item">
+
+                                                    <span>&#8226; </span>
+
+                                                    <strong>
+                                                        <span t-esc="
+                                                            task.name
+                                                        "/>
+                                                    </strong>
+
+                                                    <t t-if="
+                                                        task.date_deadline
+                                                    ">
+
+                                                        <span>
+                                                            - Due:
+                                                        </span>
+
+                                                        <span t-esc="
+                                                            task.date_deadline.strftime(
+                                                                '%d.%m.%Y'
+                                                            )
+                                                        "/>
+
+                                                    </t>
+
+                                                    <t t-else="">
+
+                                                        <span>
+                                                            - No due date
+                                                        </span>
+
+                                                    </t>
+
+                                                </div>
+
+                                            </t>
+
+                                            <span t-else="">
+                                                No pending action points
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </t>
+
+                                <tr t-else="">
+
+                                    <td colspan="11"
+                                        style="
+                                            padding: 12px;
+                                            text-align: center;
+                                            font-size: 10px;
+                                        ">
+                                        No open projects were found for the
+                                        selected business unit.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <div style="
+                            margin-top: 10px;
+                            text-align: right;
+                            font-size: 8px;
+                            color: #666666;
+                        ">
+                            Generated on
+
+                            <span t-esc="
+                                report_date.strftime('%d %B %Y')
+                            "/>
+                        </div>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- =========================
+         Weekly Task Report Action
+    ========================== -->
+    <record id="task_weekly_report_pdf" model="ir.actions.report">
+        <field name="name">Weekly Task Report</field>
+        <field name="model">project.task</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">project_report.task_weekly_report_template</field>
+        <field name="report_file">project_report.task_weekly_report_template</field>
+        <field name="binding_model_id" ref="project.model_project_task"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <!-- =========================
+         Weekly Task Report Template
+    ========================== -->
+    <template id="task_weekly_report_template">
+        <t t-call="web.html_container">
+            <t t-set="today" t-value="datetime.datetime.now()"/>
+            <t t-set="week_start" t-value="today - datetime.timedelta(days=today.weekday())"/>
+            <t t-set="week_end" t-value="week_start + datetime.timedelta(days=6)"/>
+            <t t-set="processed_projects" t-value="[]"/>
+
+            <t t-foreach="docs" t-as="task">
+                <t t-set="current_project_id" t-value="task.project_id.id if task.project_id else 0"/>
+
+                <t t-if="current_project_id not in processed_projects">
+                    <t t-set="processed_projects" t-value="processed_projects + [current_project_id]"/>
+                    <t t-set="project_tasks" t-value="docs.filtered(lambda t: (t.project_id.id if t.project_id else 0) == current_project_id)"/>
+                    <t t-set="first_task" t-value="project_tasks[0]"/>
+
+                    <t t-call="web.external_layout">
+                        <div class="page" style="font-size: 12px;">
+                            <div class="oe_structure"/>
+
+                            <!-- Report Title -->
+                            <h2 style="text-align: center; margin-bottom: 20px; font-size: 30px; font-weight: bold;">
+                                Weekly Report (<t t-esc="week_start.strftime('%d %b %Y')"/> - <t t-esc="week_end.strftime('%d %b %Y')"/>)
+                            </h2>
+
+                            <!-- Header -->
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <table class="table table-sm table-borderless" style="border: 1px solid #dee2e6; font-size: 11px;">
+                                        <thead>
+                                            <tr style="background-color: #f8f9fa;">
+                                                <th style="border: 1px solid #dee2e6; padding: 6px; width: 22%;">DESCRIPTION</th>
+                                                <th style="border: 1px solid #dee2e6; padding: 6px; width: 78%;">DETAILS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Project Info -->
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Customer Contact:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="first_task.partner_id.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Project Title:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="first_task.project_id.name if first_task.project_id else 'No Project'"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Project ID:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="first_task.get_project_id_code()"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Project Manager:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="first_task.project_id.user_id.name if first_task.project_id and first_task.project_id.user_id else 'Not assigned'"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Engineer(s) Assigned:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-set="all_engineers" t-value="', '.join(set(sum([t.user_ids.mapped('name') for t in project_tasks], [])))"/>
+                                                    <t t-if="all_engineers">
+                                                        <t t-esc="all_engineers"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">No engineers assigned</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Project Start Date:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-set="project_start_dates" t-value="project_tasks.filtered(lambda t: t.report_start_date).mapped('report_start_date')"/>
+                                                    <t t-if="project_start_dates">
+                                                        <t t-esc="min(project_start_dates).strftime('%d %b %Y')"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">Not set</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Tasks Completed This Week -->
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold; vertical-align: top;">
+                                                    Tasks Completed This Week:
+                                                </td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-set="weekly_done_tasks"
+                                                       t-value="project_tasks.filtered(lambda s: s.kanban_state == 'done' and s.write_date and week_start &lt;= s.write_date &lt;= week_end)"/>
+
+                                                    <t t-if="weekly_done_tasks">
+                                                        <t t-foreach="weekly_done_tasks" t-as="main_task">
+                                                            <t t-set="done_subtasks"
+                                                               t-value="main_task.child_ids.filtered(lambda s: s.kanban_state == 'done' and s.write_date and week_start &lt;= s.write_date &lt;= week_end)"/>
+
+                                                            <div style="margin-bottom: 10px;">
+                                                                <strong><t t-esc="main_task.name"/></strong>
+                                                                <span style="font-size: 11px; color: #6c757d;">
+                                                                    <t t-if="main_task.report_start_date">
+                                                                        (Started on <t t-esc="main_task.report_start_date.strftime('%d %b %Y')"/>)
+                                                                    </t>
+                                                                    <t t-if="main_task.write_date">
+                                                                        <t t-if="main_task.report_start_date"> | </t>
+                                                                        (Completed on <t t-esc="main_task.write_date.strftime('%d %b %Y')"/>)
+                                                                    </t>
+                                                                </span>
+
+                                                                <t t-if="done_subtasks">
+                                                                    <table style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; margin-top: 5px;">
+                                                                        <tr style="background-color: #f8f9fa;">
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Subtask</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Start Date</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Completed On</th>
+                                                                        </tr>
+                                                                        <t t-foreach="done_subtasks" t-as="sub">
+                                                                            <tr>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.name"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.report_start_date and sub.report_start_date.strftime('%d %b %Y') or 'Not set'"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.write_date and sub.write_date.strftime('%d %b %Y') or ''"/>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </t>
+                                                                    </table>
+                                                                </t>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">No tasks completed this week.</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Pending Tasks / Next Actions -->
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold; vertical-align: top;">Next Action Items:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-foreach="project_tasks" t-as="main_task">
+                                                        <t t-set="pending_subtasks" t-value="main_task.child_ids.filtered(lambda s: s.kanban_state != 'done')"/>
+                                                        <t t-if="main_task.kanban_state != 'done' or pending_subtasks">
+                                                            <div style="margin-bottom: 10px;">
+                                                                <strong><t t-esc="main_task.name"/></strong>
+                                                                <t t-if="main_task.report_start_date">
+                                                                    <span style="font-size: 11px; color: #6c757d;">
+                                                                        (Start Date: <t t-esc="main_task.report_start_date.strftime('%d %b %Y')"/>)
+                                                                    </span>
+                                                                </t>
+
+                                                                <t t-if="pending_subtasks">
+                                                                    <table style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; margin-top: 5px;">
+                                                                        <tr style="background-color: #f8f9fa;">
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Subtask</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Start Date</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Deadline</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Status</th>
+                                                                        </tr>
+                                                                        <t t-foreach="pending_subtasks" t-as="sub">
+                                                                            <tr>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;"><t t-esc="sub.name"/></td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.report_start_date and sub.report_start_date.strftime('%d %b %Y') or 'Not set'"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.date_deadline and sub.date_deadline.strftime('%d %b %Y') or 'No deadline'"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-if="sub.kanban_state == 'blocked' or sub.status == 'cancelled'">Blocked</t>
+                                                                                    <t t-elif="sub.kanban_state == 'done' or sub.status == 'completed'">Completed</t>
+                                                                                    <t t-elif="sub.status == 'yet_to_commence' or (sub.report_start_date and sub.report_start_date &gt; context_timestamp(datetime.datetime.now()).date())">Yet to commence</t>
+                                                                                    <t t-elif="sub.status == 'not_started' and (not sub.report_start_date or sub.report_start_date &gt;= context_timestamp(datetime.datetime.now()).date())">Yet to commence</t>
+                                                                                    <t t-else="">In Progress</t>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </t>
+                                                                    </table>
+                                                                </t>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Customer Actions -->
+                                            <tr>
+                                                <td style="border:1px solid #dee2e6; padding:6px; font-weight:bold; vertical-align:top;">Action Required from Customer:</td>
+                                                <td style="border:1px solid #dee2e6; padding:6px;">
+                                                    <t t-set="has_customer_actions" t-value="False"/>
+                                                    <t t-foreach="project_tasks" t-as="ptask">
+                                                        <t t-set="customer_action" t-value="ptask.get_customer_actions_required()"/>
+                                                        <t t-if="customer_action and customer_action != 'No specific action required at this time'">
+                                                            <t t-set="has_customer_actions" t-value="True"/>
+                                                            • <t t-esc="customer_action"/><br/>
+                                                        </t>
+                                                    </t>
+                                                    <t t-if="not has_customer_actions">
+                                                        <span class="text-muted">No specific action required at this time</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="row" style="margin-top:auto;">
+                                <div class="col-12 text-center">
+                                    <p class="text-muted" style="font-size:9px; margin-bottom:0;">
+                                        Report generated on <t t-esc="today.strftime('%d %B %Y at %I:%M %p')"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="oe_structure"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- =========================
+         Weekly Project Report Action
+    ========================== -->
+    <record id="action_project_weekly_report_pdf" model="ir.actions.report">
+        <field name="name">Weekly Project Report</field>
+        <field name="model">project.monthly.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">project_report.project_weekly_report_template</field>
+        <field name="report_file">project_report.project_weekly_report_template</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+        <field name="print_report_name">'Weekly Project Report - %s' % (object.get_period_label())</field>
+    </record>
+
+    <!-- =========================
+         Weekly Project Report Template
+    ========================== -->
+    <template id="project_weekly_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="wizard">
+                <t t-set="date_range" t-value="wizard.get_period_date_range()"/>
+                <t t-set="start_date" t-value="date_range[0]"/>
+                <t t-set="end_date" t-value="date_range[1]"/>
+                <t t-set="period_label" t-value="wizard.get_period_label()"/>
+                <t t-set="frequency_label" t-value="wizard.get_report_frequency_label()"/>
+                <t t-set="generated_on" t-value="context_timestamp(datetime.datetime.now())"/>
+                <t t-set="show_registered" t-value="wizard.include_registered_section()"/>
+                <t t-set="show_completed" t-value="wizard.include_completed_section()"/>
+                <t t-set="registered_lines" t-value="wizard.get_registered_project_lines() if show_registered else []"/>
+                <t t-set="completed_lines" t-value="wizard.get_completed_project_lines() if show_completed else []"/>
+
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size: 12px;">
+                        <div class="oe_structure"/>
+
+                        <!-- Report Title -->
+                        <h2 style="text-align: center; margin-bottom: 6px; font-size: 26px; font-weight: bold;">
+                            Weekly Project Report (<t t-esc="period_label"/>)
+                        </h2>
+                        <p style="text-align: center; margin-bottom: 18px; font-size: 12px; color: #6c757d;">
+                            Reporting Frequency: <t t-esc="frequency_label"/> | Selected Week: <t t-esc="start_date.strftime('%d %b %Y')"/> - <t t-esc="end_date.strftime('%d %b %Y')"/>
+                        </p>
+
+                        <!-- Report Metadata Summary -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <table class="table table-sm table-borderless" style="border: 1px solid #dee2e6; font-size: 11px; width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <th style="border: 1px solid #dee2e6; padding: 6px; width: 25%;">REPORT PARAMETER</th>
+                                            <th style="border: 1px solid #dee2e6; padding: 6px; width: 75%;">DETAILS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Reporting Frequency:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="frequency_label"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Selected Week Range:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="start_date.strftime('%A, %d %b %Y')"/> - <t t-esc="end_date.strftime('%A, %d %b %Y')"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Report Category:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="wizard.get_report_category_label()"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Report Generation Date:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="generated_on.strftime('%d %B %Y at %I:%M %p')"/></td>
+                                        </tr>
+                                        <tr t-if="show_registered">
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Total Projects Registered:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="len(registered_lines)"/></td>
+                                        </tr>
+                                        <tr t-if="show_completed">
+                                            <td style="border: 1px solid #dee2e6; padding: 6px; font-weight: bold;">Total Projects Completed:</td>
+                                            <td style="border: 1px solid #dee2e6; padding: 6px;"><t t-esc="len(completed_lines)"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Section 1: Projects Registered -->
+                        <t t-if="show_registered">
+                            <div class="row mb-4" style="margin-top: 16px;">
+                                <div class="col-12">
+                                    <h4 style="font-size: 15px; font-weight: bold; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid #dee2e6;">
+                                        Projects Registered (<t t-esc="period_label"/>)
+                                    </h4>
+
+                                    <t t-if="registered_lines">
+                                        <table class="table table-sm table-borderless" style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; font-size: 10px;">
+                                            <thead style="display: table-header-group;">
+                                                <tr style="background-color: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 4%; text-align: center;">S/N</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 11%;">Project ID</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 22%;">Project Name</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 15%;">Customer</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 13%;">Project Manager</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 9%; text-align: center;">Registration Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 8%; text-align: center;">Start Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 8%; text-align: center;">Planned End Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 10%;">Current Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="registered_lines" t-as="line">
+                                                    <tr>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line_index + 1"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['project_id']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; font-weight: bold;">
+                                                            <t t-esc="line['project_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['customer_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['manager_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['registration_date'] and line['registration_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['start_date'] and line['start_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['planned_end_date'] and line['planned_end_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['status']"/>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </t>
+                                    <t t-else="">
+                                        <div style="border: 1px solid #dee2e6; background-color: #f8f9fa; padding: 12px; text-align: center; color: #6c757d; font-size: 11px;">
+                                            No projects were registered during the week of <t t-esc="period_label"/>.
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+
+                        <!-- Section 2: Projects Completed -->
+                        <t t-if="show_completed">
+                            <div class="row mb-4" style="margin-top: 16px;">
+                                <div class="col-12">
+                                    <h4 style="font-size: 15px; font-weight: bold; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid #dee2e6;">
+                                        Projects Completed (<t t-esc="period_label"/>)
+                                    </h4>
+
+                                    <t t-if="completed_lines">
+                                        <table class="table table-sm table-borderless" style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; font-size: 10px;">
+                                            <thead style="display: table-header-group;">
+                                                <tr style="background-color: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 4%; text-align: center;">S/N</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 11%;">Project ID</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 22%;">Project Name</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 15%;">Customer</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 13%;">Project Manager</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 8%; text-align: center;">Start Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 8%; text-align: center;">Planned End Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 9%; text-align: center;">Completion Date</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 5px; width: 10%;">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="completed_lines" t-as="line">
+                                                    <tr>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line_index + 1"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['project_id']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; font-weight: bold;">
+                                                            <t t-esc="line['project_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['customer_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['manager_name']"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['start_date'] and line['start_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['planned_end_date'] and line['planned_end_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; text-align: center;">
+                                                            <t t-esc="line['completion_date'] and line['completion_date'].strftime('%d %b %Y') or 'Not set'"/>
+                                                        </td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">
+                                                            <t t-esc="line['status']"/>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </t>
+                                    <t t-else="">
+                                        <div style="border: 1px solid #dee2e6; background-color: #f8f9fa; padding: 12px; text-align: center; color: #6c757d; font-size: 11px;">
+                                            No projects were completed during the week of <t t-esc="period_label"/>.
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+
+                        <!-- Footer -->
+                        <div class="row" style="margin-top: auto;">
+                            <div class="col-12 text-center">
+                                <p class="text-muted" style="font-size: 9px; margin-bottom: 0;">
+                                    Report generated on <t t-esc="generated_on.strftime('%d %B %Y at %I:%M %p')"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

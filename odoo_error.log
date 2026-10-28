@@ -1,0 +1,1960 @@
+2026-09-15 15:00:36,215 37268 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2026-09-15 15:00:36,216 37268 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2026-09-15 15:00:36,216 37268 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-15 15:00:36,216 37268 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2026-09-15 15:00:36,216 37268 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2026-09-15 15:00:36,216 37268 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-15 15:00:36,218 37268 INFO ? odoo: Odoo version 16.0 
+2026-09-15 15:00:36,218 37268 INFO ? odoo: Using configuration file at C:\Users\deric\odoo\odoo.conf 
+2026-09-15 15:00:36,218 37268 INFO ? odoo: addons paths: ['C:\\Users\\deric\\odoo\\odoo\\addons', 'c:\\users\\deric\\appdata\\local\\openerp s.a\\odoo\\addons\\16.0', 'c:\\users\\deric\\odoo\\addons', 'c:\\users\\deric\\odoo\\custom', 'c:\\users\\deric\\odoo\\odoo\\addons'] 
+2026-09-15 15:00:36,219 37268 INFO ? odoo: database: odoo@localhost:5432 
+2026-09-15 15:00:36,463 37268 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-09-15 15:00:36,901 37268 DEBUG ? odoo.service.server: Setting signal handlers 
+2026-09-15 15:00:36,905 37268 DEBUG ? odoo.service.server: cron0 started! 
+2026-09-15 15:00:36,906 37268 DEBUG ? odoo.service.server: cron1 started! 
+2026-09-15 15:00:36,935 37268 INFO ? odoo.service.server: HTTP service (werkzeug) running on Anteiku?.cctz.co.tz:8069 
+2026-09-15 15:01:11,019 37268 DEBUG ? odoo.http: HTTP sessions stored in: c:\users\deric\appdata\local\openerp s.a\odoo\sessions 
+2026-09-15 15:01:11,185 37268 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 840] [Cache: 19062] 
+2026-09-15 15:01:11,197 37268 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-15 15:01:11,198 37268 DEBUG ? odoo.modules.loading: Loading module base (1/1) 
+2026-09-15 15:01:11,209 37268 DEBUG ? odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2026-09-15 15:01:11,209 37268 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-15 15:01:11,347 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'birthday_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:11,480 37268 DEBUG ? odoo.modules.module: module contacts_custom_registry: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2026-09-15 15:01:11,480 37268 WARNING ? odoo.modules.graph: module contacts_custom_registry: not installable, skipped 
+2026-09-15 15:01:11,509 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'cctz_hr', defaulting to LGPL-3 
+2026-09-15 15:01:11,513 37268 DEBUG ? odoo.modules.module: module invetory_custom: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2026-09-15 15:01:11,513 37268 WARNING ? odoo.modules.graph: module invetory_custom: not installable, skipped 
+2026-09-15 15:01:11,516 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'project_report', defaulting to LGPL-3 
+2026-09-15 15:01:11,533 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'project_task_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:11,549 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'leave_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:11,590 37268 DEBUG ? odoo.modules.module: module sales_custom: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2026-09-15 15:01:11,590 37268 WARNING ? odoo.modules.graph: module sales_custom: not installable, skipped 
+2026-09-15 15:01:11,616 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'cctz_warranty', defaulting to LGPL-3 
+2026-09-15 15:01:11,635 37268 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'project_management_custom', defaulting to LGPL-3 
+2026-09-15 15:01:11,771 37268 DEBUG ? odoo.modules.loading: Updating graph with 203 more modules 
+2026-09-15 15:01:11,772 37268 INFO ? odoo.modules.loading: loading 201 modules... 
+2026-09-15 15:01:11,772 37268 DEBUG ? odoo.modules.loading: Loading module social_media (2/201) 
+2026-09-15 15:01:11,782 37268 DEBUG ? odoo.modules.loading: Module social_media loaded in 0.01s, 0 queries 
+2026-09-15 15:01:11,782 37268 DEBUG ? odoo.modules.loading: Loading module uom (3/201) 
+2026-09-15 15:01:11,791 37268 DEBUG ? odoo.modules.loading: Module uom loaded in 0.01s, 0 queries 
+2026-09-15 15:01:11,792 37268 DEBUG ? odoo.modules.loading: Loading module web (4/201) 
+2026-09-15 15:01:11,795 37268 DEBUG ? odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2026-09-15 15:01:11,796 37268 DEBUG ? odoo.modules.loading: Loading module attachment_indexation (5/201) 
+2026-09-15 15:01:11,815 37268 WARNING ? odoo.addons.attachment_indexation.models.ir_attachment: Attachment indexation of PDF documents is unavailable because the 'pdfminer' Python library cannot be found on the system. You may install it from https://pypi.org/project/pdfminer.six/ (e.g. `pip3 install pdfminer.six`) 
+2026-09-15 15:01:11,816 37268 DEBUG ? odoo.modules.loading: Module attachment_indexation loaded in 0.02s, 0 queries 
+2026-09-15 15:01:11,816 37268 DEBUG ? odoo.modules.loading: Loading module auth_totp (6/201) 
+2026-09-15 15:01:11,857 37268 DEBUG ? odoo.modules.loading: Module auth_totp loaded in 0.04s, 0 queries 
+2026-09-15 15:01:11,858 37268 DEBUG ? odoo.modules.loading: Loading module barcodes (7/201) 
+2026-09-15 15:01:11,870 37268 DEBUG ? odoo.modules.loading: Module barcodes loaded in 0.01s, 0 queries 
+2026-09-15 15:01:11,871 37268 DEBUG ? odoo.modules.loading: Loading module base_import (8/201) 
+2026-09-15 15:01:11,893 37268 DEBUG ? odoo.modules.loading: Module base_import loaded in 0.02s, 0 queries 
+2026-09-15 15:01:11,894 37268 DEBUG ? odoo.modules.loading: Loading module base_setup (9/201) 
+2026-09-15 15:01:11,907 37268 DEBUG ? odoo.modules.loading: Module base_setup loaded in 0.01s, 0 queries 
+2026-09-15 15:01:11,908 37268 DEBUG ? odoo.modules.loading: Loading module bus (10/201) 
+2026-09-15 15:01:11,939 37268 DEBUG ? odoo.modules.loading: Module bus loaded in 0.03s, 0 queries 
+2026-09-15 15:01:11,940 37268 DEBUG ? odoo.modules.loading: Loading module http_routing (11/201) 
+2026-09-15 15:01:11,955 37268 DEBUG ? odoo.modules.loading: Module http_routing loaded in 0.02s, 0 queries 
+2026-09-15 15:01:11,957 37268 DEBUG ? odoo.modules.loading: Loading module resource (12/201) 
+2026-09-15 15:01:11,978 37268 DEBUG ? odoo.modules.loading: Module resource loaded in 0.02s, 0 queries 
+2026-09-15 15:01:11,979 37268 DEBUG ? odoo.modules.loading: Loading module utm (13/201) 
+2026-09-15 15:01:11,996 37268 DEBUG ? odoo.modules.loading: Module utm loaded in 0.02s, 0 queries 
+2026-09-15 15:01:11,996 37268 DEBUG ? odoo.modules.loading: Loading module web_kanban_gauge (14/201) 
+2026-09-15 15:01:11,998 37268 DEBUG ? odoo.modules.loading: Module web_kanban_gauge loaded in 0.00s, 0 queries 
+2026-09-15 15:01:11,998 37268 DEBUG ? odoo.modules.loading: Loading module web_tour (15/201) 
+2026-09-15 15:01:12,005 37268 DEBUG ? odoo.modules.loading: Module web_tour loaded in 0.01s, 0 queries 
+2026-09-15 15:01:12,006 37268 DEBUG ? odoo.modules.loading: Loading module auth_ldap (16/201) 
+2026-09-15 15:01:12,181 37268 DEBUG ? odoo.modules.loading: Module auth_ldap loaded in 0.17s, 0 queries 
+2026-09-15 15:01:12,182 37268 DEBUG ? odoo.modules.loading: Loading module barcodes_gs1_nomenclature (17/201) 
+2026-09-15 15:01:12,199 37268 DEBUG ? odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.02s, 0 queries 
+2026-09-15 15:01:12,199 37268 DEBUG ? odoo.modules.loading: Loading module google_recaptcha (18/201) 
+2026-09-15 15:01:12,213 37268 DEBUG ? odoo.modules.loading: Module google_recaptcha loaded in 0.01s, 0 queries 
+2026-09-15 15:01:12,215 37268 DEBUG ? odoo.modules.loading: Loading module iap (19/201) 
+2026-09-15 15:01:12,231 37268 DEBUG ? odoo.modules.loading: Module iap loaded in 0.02s, 0 queries 
+2026-09-15 15:01:12,231 37268 DEBUG ? odoo.modules.loading: Loading module mail (20/201) 
+2026-09-15 15:01:12,440 37268 DEBUG ? odoo.modules.loading: Module mail loaded in 0.21s, 0 queries 
+2026-09-15 15:01:12,440 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet (21/201) 
+2026-09-15 15:01:12,453 37268 DEBUG ? odoo.modules.loading: Module spreadsheet loaded in 0.01s, 0 queries 
+2026-09-15 15:01:12,454 37268 DEBUG ? odoo.modules.loading: Loading module web_editor (22/201) 
+2026-09-15 15:01:12,516 37268 DEBUG ? odoo.modules.loading: Module web_editor loaded in 0.06s, 0 queries 
+2026-09-15 15:01:12,516 37268 DEBUG ? odoo.modules.loading: Loading module analytic (23/201) 
+2026-09-15 15:01:12,539 37268 DEBUG ? odoo.modules.loading: Module analytic loaded in 0.02s, 0 queries 
+2026-09-15 15:01:12,539 37268 DEBUG ? odoo.modules.loading: Loading module auth_signup (24/201) 
+2026-09-15 15:01:12,558 37268 DEBUG ? odoo.modules.loading: Module auth_signup loaded in 0.02s, 0 queries 
+2026-09-15 15:01:12,558 37268 DEBUG ? odoo.modules.loading: Loading module auth_totp_mail (25/201) 
+2026-09-15 15:01:12,566 37268 DEBUG ? odoo.modules.loading: Module auth_totp_mail loaded in 0.01s, 0 queries 
+2026-09-15 15:01:12,566 37268 DEBUG ? odoo.modules.loading: Loading module auto_database_backup (26/201) 
+2026-09-15 15:01:13,220 37268 DEBUG ? odoo.modules.loading: Module auto_database_backup loaded in 0.65s, 0 queries 
+2026-09-15 15:01:13,220 37268 DEBUG ? odoo.modules.loading: Loading module base_install_request (27/201) 
+2026-09-15 15:01:13,234 37268 DEBUG ? odoo.modules.loading: Module base_install_request loaded in 0.01s, 0 queries 
+2026-09-15 15:01:13,234 37268 DEBUG ? odoo.modules.loading: Loading module calendar (28/201) 
+2026-09-15 15:01:13,304 37268 DEBUG ? odoo.modules.loading: Module calendar loaded in 0.07s, 0 queries 
+2026-09-15 15:01:13,304 37268 DEBUG ? odoo.modules.loading: Loading module chatGPT (29/201) 
+2026-09-15 15:01:17,035 37268 DEBUG ? odoo.modules.loading: Module chatGPT loaded in 3.73s, 0 queries 
+2026-09-15 15:01:17,035 37268 DEBUG ? odoo.modules.loading: Loading module contacts (30/201) 
+2026-09-15 15:01:17,048 37268 DEBUG ? odoo.modules.loading: Module contacts loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,048 37268 DEBUG ? odoo.modules.loading: Loading module gamification (31/201) 
+2026-09-15 15:01:17,097 37268 DEBUG ? odoo.modules.loading: Module gamification loaded in 0.05s, 0 queries 
+2026-09-15 15:01:17,098 37268 DEBUG ? odoo.modules.loading: Loading module google_gmail (32/201) 
+2026-09-15 15:01:17,113 37268 DEBUG ? odoo.modules.loading: Module google_gmail loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,113 37268 DEBUG ? odoo.modules.loading: Loading module hr (33/201) 
+2026-09-15 15:01:17,190 37268 DEBUG ? odoo.modules.loading: Module hr loaded in 0.08s, 0 queries 
+2026-09-15 15:01:17,190 37268 DEBUG ? odoo.modules.loading: Loading module iap_mail (34/201) 
+2026-09-15 15:01:17,197 37268 DEBUG ? odoo.modules.loading: Module iap_mail loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,198 37268 DEBUG ? odoo.modules.loading: Loading module link_tracker (35/201) 
+2026-09-15 15:01:17,221 37268 DEBUG ? odoo.modules.loading: Module link_tracker loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,222 37268 DEBUG ? odoo.modules.loading: Loading module loan_form (36/201) 
+2026-09-15 15:01:17,227 37268 WARNING ? odoo.api.create: The model odoo.addons.loan_form.models.loanForm is not overriding the create method in batch 
+2026-09-15 15:01:17,233 37268 DEBUG ? odoo.modules.loading: Module loan_form loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,233 37268 DEBUG ? odoo.modules.loading: Loading module mail_bot (37/201) 
+2026-09-15 15:01:17,247 37268 DEBUG ? odoo.modules.loading: Module mail_bot loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,248 37268 DEBUG ? odoo.modules.loading: Loading module microsoft_outlook (38/201) 
+2026-09-15 15:01:17,260 37268 DEBUG ? odoo.modules.loading: Module microsoft_outlook loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,260 37268 DEBUG ? odoo.modules.loading: Loading module note (39/201) 
+2026-09-15 15:01:17,278 37268 DEBUG ? odoo.modules.loading: Module note loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,279 37268 DEBUG ? odoo.modules.loading: Loading module phone_validation (40/201) 
+2026-09-15 15:01:17,302 37268 DEBUG ? odoo.modules.loading: Module phone_validation loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,302 37268 DEBUG ? odoo.modules.loading: Loading module privacy_lookup (41/201) 
+2026-09-15 15:01:17,314 37268 DEBUG ? odoo.modules.loading: Module privacy_lookup loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,315 37268 DEBUG ? odoo.modules.loading: Loading module product (42/201) 
+2026-09-15 15:01:17,577 37268 DEBUG ? odoo.modules.loading: Module product loaded in 0.26s, 0 queries 
+2026-09-15 15:01:17,577 37268 DEBUG ? odoo.modules.loading: Loading module rating (43/201) 
+2026-09-15 15:01:17,595 37268 DEBUG ? odoo.modules.loading: Module rating loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,595 37268 DEBUG ? odoo.modules.loading: Loading module sales_team (44/201) 
+2026-09-15 15:01:17,618 37268 DEBUG ? odoo.modules.loading: Module sales_team loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,618 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard (45/201) 
+2026-09-15 15:01:17,630 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,630 37268 DEBUG ? odoo.modules.loading: Loading module web_unsplash (46/201) 
+2026-09-15 15:01:17,642 37268 DEBUG ? odoo.modules.loading: Module web_unsplash loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,642 37268 DEBUG ? odoo.modules.loading: Loading module birthday_reminder (47/201) 
+2026-09-15 15:01:17,649 37268 DEBUG ? odoo.modules.loading: Module birthday_reminder loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,649 37268 DEBUG ? odoo.modules.loading: Loading module board (48/201) 
+2026-09-15 15:01:17,669 37268 DEBUG ? odoo.modules.loading: Module board loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,669 37268 DEBUG ? odoo.modules.loading: Loading module customer_it_portfolio (49/201) 
+2026-09-15 15:01:17,697 37268 DEBUG ? odoo.modules.loading: Module customer_it_portfolio loaded in 0.03s, 0 queries 
+2026-09-15 15:01:17,698 37268 DEBUG ? odoo.modules.loading: Loading module hr_attendance (50/201) 
+2026-09-15 15:01:17,736 37268 DEBUG ? odoo.modules.loading: Module hr_attendance loaded in 0.04s, 0 queries 
+2026-09-15 15:01:17,737 37268 DEBUG ? odoo.modules.loading: Loading module hr_contract (51/201) 
+2026-09-15 15:01:17,776 37268 DEBUG ? odoo.modules.loading: Module hr_contract loaded in 0.04s, 0 queries 
+2026-09-15 15:01:17,776 37268 DEBUG ? odoo.modules.loading: Loading module hr_gamification (52/201) 
+2026-09-15 15:01:17,793 37268 DEBUG ? odoo.modules.loading: Module hr_gamification loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,793 37268 DEBUG ? odoo.modules.loading: Loading module hr_holidays (53/201) 
+2026-09-15 15:01:17,864 37268 DEBUG ? odoo.modules.loading: Module hr_holidays loaded in 0.07s, 0 queries 
+2026-09-15 15:01:17,864 37268 DEBUG ? odoo.modules.loading: Loading module hr_hourly_cost (54/201) 
+2026-09-15 15:01:17,880 37268 DEBUG ? odoo.modules.loading: Module hr_hourly_cost loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,880 37268 DEBUG ? odoo.modules.loading: Loading module hr_org_chart (55/201) 
+2026-09-15 15:01:17,891 37268 DEBUG ? odoo.modules.loading: Module hr_org_chart loaded in 0.01s, 0 queries 
+2026-09-15 15:01:17,891 37268 DEBUG ? odoo.modules.loading: Loading module hr_skills (56/201) 
+2026-09-15 15:01:17,918 37268 DEBUG ? odoo.modules.loading: Module hr_skills loaded in 0.03s, 0 queries 
+2026-09-15 15:01:17,918 37268 DEBUG ? odoo.modules.loading: Loading module mail_bot_hr (57/201) 
+2026-09-15 15:01:17,920 37268 DEBUG ? odoo.modules.loading: Module mail_bot_hr loaded in 0.00s, 0 queries 
+2026-09-15 15:01:17,920 37268 DEBUG ? odoo.modules.loading: Loading module partner_autocomplete (58/201) 
+2026-09-15 15:01:17,938 37268 DEBUG ? odoo.modules.loading: Module partner_autocomplete loaded in 0.02s, 0 queries 
+2026-09-15 15:01:17,938 37268 DEBUG ? odoo.modules.loading: Loading module portal (59/201) 
+2026-09-15 15:01:17,983 37268 DEBUG ? odoo.modules.loading: Module portal loaded in 0.05s, 0 queries 
+2026-09-15 15:01:17,984 37268 DEBUG ? odoo.modules.loading: Loading module sms (60/201) 
+2026-09-15 15:01:18,077 37268 DEBUG ? odoo.modules.loading: Module sms loaded in 0.09s, 0 queries 
+2026-09-15 15:01:18,078 37268 DEBUG ? odoo.modules.loading: Loading module snailmail (61/201) 
+2026-09-15 15:01:18,103 37268 DEBUG ? odoo.modules.loading: Module snailmail loaded in 0.02s, 0 queries 
+2026-09-15 15:01:18,103 37268 DEBUG ? odoo.modules.loading: Loading module survey (62/201) 
+2026-09-15 15:01:18,136 37268 DEBUG ? odoo.modules.loading: Module survey loaded in 0.03s, 0 queries 
+2026-09-15 15:01:18,136 37268 DEBUG ? odoo.modules.loading: Loading module auth_totp_portal (63/201) 
+2026-09-15 15:01:18,147 37268 DEBUG ? odoo.modules.loading: Module auth_totp_portal loaded in 0.01s, 0 queries 
+2026-09-15 15:01:18,147 37268 DEBUG ? odoo.modules.loading: Loading module calendar_sms (64/201) 
+2026-09-15 15:01:18,161 37268 DEBUG ? odoo.modules.loading: Module calendar_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:18,163 37268 DEBUG ? odoo.modules.loading: Loading module cctz_hr (65/201) 
+2026-09-15 15:01:18,176 37268 DEBUG ? odoo.modules.loading: Module cctz_hr loaded in 0.01s, 0 queries 
+2026-09-15 15:01:18,177 37268 DEBUG ? odoo.modules.loading: Loading module digest (66/201) 
+2026-09-15 15:01:18,196 37268 DEBUG ? odoo.modules.loading: Module digest loaded in 0.02s, 0 queries 
+2026-09-15 15:01:18,196 37268 DEBUG ? odoo.modules.loading: Loading module event (67/201) 
+2026-09-15 15:01:18,229 37268 DEBUG ? odoo.modules.loading: Module event loaded in 0.03s, 0 queries 
+2026-09-15 15:01:18,229 37268 DEBUG ? odoo.modules.loading: Loading module hr_holidays_attendance (68/201) 
+2026-09-15 15:01:18,250 37268 DEBUG ? odoo.modules.loading: Module hr_holidays_attendance loaded in 0.02s, 0 queries 
+2026-09-15 15:01:18,251 37268 DEBUG ? odoo.modules.loading: Loading module hr_skills_survey (69/201) 
+2026-09-15 15:01:18,272 37268 DEBUG ? odoo.modules.loading: Module hr_skills_survey loaded in 0.02s, 0 queries 
+2026-09-15 15:01:18,273 37268 DEBUG ? odoo.modules.loading: Loading module hr_zk_attendance (70/201) 
+2026-09-15 15:01:18,305 37268 ERROR ? odoo.addons.hr_zk_attendance.models.zk_machine: Please Install pyzk library. 
+2026-09-15 15:01:18,308 37268 WARNING ? odoo.models: The model zk.machine has no _description 
+2026-09-15 15:01:18,309 37268 WARNING ? odoo.models: The model zk.machine.attendance has no _description 
+2026-09-15 15:01:18,309 37268 WARNING ? odoo.models: The model zk.report.daily.attendance has no _description 
+2026-09-15 15:01:18,309 37268 DEBUG ? odoo.modules.loading: Module hr_zk_attendance loaded in 0.04s, 0 queries 
+2026-09-15 15:01:18,309 37268 DEBUG ? odoo.modules.loading: Loading module leave_reminder (71/201) 
+2026-09-15 15:01:18,319 37268 DEBUG ? odoo.modules.loading: Module leave_reminder loaded in 0.01s, 0 queries 
+2026-09-15 15:01:18,319 37268 DEBUG ? odoo.modules.loading: Loading module payment (72/201) 
+2026-09-15 15:01:18,372 37268 DEBUG ? odoo.modules.loading: Module payment loaded in 0.05s, 0 queries 
+2026-09-15 15:01:18,373 37268 DEBUG ? odoo.modules.loading: Loading module portal_rating (73/201) 
+2026-09-15 15:01:18,393 37268 DEBUG ? odoo.modules.loading: Module portal_rating loaded in 0.02s, 0 queries 
+2026-09-15 15:01:18,393 37268 DEBUG ? odoo.modules.loading: Loading module account (74/201) 
+2026-09-15 15:01:18,641 37268 DEBUG ? odoo.modules.loading: Module account loaded in 0.25s, 0 queries 
+2026-09-15 15:01:18,641 37268 DEBUG ? odoo.modules.loading: Loading module cctz_warranty (75/201) 
+2026-09-15 15:01:19,695 37268 WARNING ? odoo.api.create: The model odoo.addons.cctz_warranty.models.warranty is not overriding the create method in batch 
+2026-09-15 15:01:19,703 37268 DEBUG ? odoo.modules.loading: Module cctz_warranty loaded in 1.06s, 0 queries 
+2026-09-15 15:01:19,704 37268 DEBUG ? odoo.modules.loading: Loading module crm (76/201) 
+2026-09-15 15:01:19,751 37268 DEBUG ? odoo.modules.loading: Module crm loaded in 0.05s, 0 queries 
+2026-09-15 15:01:19,751 37268 DEBUG ? odoo.modules.loading: Loading module event_sms (77/201) 
+2026-09-15 15:01:19,758 37268 DEBUG ? odoo.modules.loading: Module event_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:19,758 37268 DEBUG ? odoo.modules.loading: Loading module hr_recruitment (78/201) 
+2026-09-15 15:01:19,789 37268 DEBUG ? odoo.modules.loading: Module hr_recruitment loaded in 0.03s, 0 queries 
+2026-09-15 15:01:19,789 37268 DEBUG ? odoo.modules.loading: Loading module im_livechat (79/201) 
+2026-09-15 15:01:19,832 37268 DEBUG ? odoo.modules.loading: Module im_livechat loaded in 0.04s, 0 queries 
+2026-09-15 15:01:19,832 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing (80/201) 
+2026-09-15 15:01:19,890 37268 DEBUG ? odoo.modules.loading: Module mass_mailing loaded in 0.06s, 0 queries 
+2026-09-15 15:01:19,891 37268 DEBUG ? odoo.modules.loading: Loading module payment_demo (81/201) 
+2026-09-15 15:01:19,903 37268 DEBUG ? odoo.modules.loading: Module payment_demo loaded in 0.01s, 0 queries 
+2026-09-15 15:01:19,903 37268 DEBUG ? odoo.modules.loading: Loading module project (82/201) 
+2026-09-15 15:01:19,955 37268 DEBUG ? odoo.modules.loading: Module project loaded in 0.05s, 0 queries 
+2026-09-15 15:01:19,955 37268 DEBUG ? odoo.modules.loading: Loading module stock (83/201) 
+2026-09-15 15:01:19,960 37268 DEBUG ? odoo.modules.loading: Module stock loaded in 0.01s, 0 queries 
+2026-09-15 15:01:19,960 37268 DEBUG ? odoo.modules.loading: Loading module website (84/201) 
+2026-09-15 15:01:20,037 37268 WARNING ? odoo.models: The model zk.machine.attendance has no _description 
+2026-09-15 15:01:20,039 37268 WARNING ? odoo.models: The model zk.machine has no _description 
+2026-09-15 15:01:20,039 37268 WARNING ? odoo.models: The model zk.machine.attendance has no _description 
+2026-09-15 15:01:20,039 37268 WARNING ? odoo.models: The model zk.report.daily.attendance has no _description 
+2026-09-15 15:01:20,045 37268 DEBUG ? odoo.modules.loading: Module website loaded in 0.09s, 0 queries 
+2026-09-15 15:01:20,045 37268 DEBUG ? odoo.modules.loading: Loading module account_edi (85/201) 
+2026-09-15 15:01:20,069 37268 DEBUG ? odoo.modules.loading: Module account_edi loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,070 37268 DEBUG ? odoo.modules.loading: Loading module account_payment (86/201) 
+2026-09-15 15:01:20,088 37268 DEBUG ? odoo.modules.loading: Module account_payment loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,088 37268 DEBUG ? odoo.modules.loading: Loading module account_sequence (87/201) 
+2026-09-15 15:01:20,093 37268 DEBUG ? odoo.modules.loading: Module account_sequence loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,093 37268 DEBUG ? odoo.modules.loading: Loading module crm_livechat (88/201) 
+2026-09-15 15:01:20,099 37268 DEBUG ? odoo.modules.loading: Module crm_livechat loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,099 37268 DEBUG ? odoo.modules.loading: Loading module crm_sms (89/201) 
+2026-09-15 15:01:20,101 37268 DEBUG ? odoo.modules.loading: Module crm_sms loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,101 37268 DEBUG ? odoo.modules.loading: Loading module event_crm (90/201) 
+2026-09-15 15:01:20,110 37268 DEBUG ? odoo.modules.loading: Module event_crm loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,110 37268 DEBUG ? odoo.modules.loading: Loading module hr_expense (91/201) 
+2026-09-15 15:01:20,142 37268 DEBUG ? odoo.modules.loading: Module hr_expense loaded in 0.03s, 0 queries 
+2026-09-15 15:01:20,143 37268 DEBUG ? odoo.modules.loading: Loading module hr_recruitment_skills (92/201) 
+2026-09-15 15:01:20,151 37268 DEBUG ? odoo.modules.loading: Module hr_recruitment_skills loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,151 37268 DEBUG ? odoo.modules.loading: Loading module hr_timesheet (93/201) 
+2026-09-15 15:01:20,182 37268 DEBUG ? odoo.modules.loading: Module hr_timesheet loaded in 0.03s, 0 queries 
+2026-09-15 15:01:20,182 37268 DEBUG ? odoo.modules.loading: Loading module iap_crm (94/201) 
+2026-09-15 15:01:20,187 37268 DEBUG ? odoo.modules.loading: Module iap_crm loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,187 37268 DEBUG ? odoo.modules.loading: Loading module im_livechat_mail_bot (95/201) 
+2026-09-15 15:01:20,203 37268 DEBUG ? odoo.modules.loading: Module im_livechat_mail_bot loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,203 37268 DEBUG ? odoo.modules.loading: Loading module l10n_ke (96/201) 
+2026-09-15 15:01:20,207 37268 DEBUG ? odoo.modules.loading: Module l10n_ke loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,207 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_crm (97/201) 
+2026-09-15 15:01:20,214 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_crm loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,214 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_event (98/201) 
+2026-09-15 15:01:20,218 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_event loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,219 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sms (99/201) 
+2026-09-15 15:01:20,242 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_sms loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,242 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_themes (100/201) 
+2026-09-15 15:01:20,245 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_themes loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,245 37268 DEBUG ? odoo.modules.loading: Loading module project_management_custom (101/201) 
+2026-09-15 15:01:20,250 37268 WARNING ? odoo.api.create: The model odoo.addons.project_management_custom.models.project_management is not overriding the create method in batch 
+2026-09-15 15:01:20,252 37268 DEBUG ? odoo.modules.loading: Module project_management_custom loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,253 37268 DEBUG ? odoo.modules.loading: Loading module project_report (102/201) 
+2026-09-15 15:01:20,257 37268 DEBUG ? odoo.modules.loading: Module project_report loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,257 37268 DEBUG ? odoo.modules.loading: Loading module project_sms (103/201) 
+2026-09-15 15:01:20,270 37268 DEBUG ? odoo.modules.loading: Module project_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,270 37268 DEBUG ? odoo.modules.loading: Loading module project_task_reminder (104/201) 
+2026-09-15 15:01:20,278 37268 DEBUG ? odoo.modules.loading: Module project_task_reminder loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,278 37268 DEBUG ? odoo.modules.loading: Loading module purchase (105/201) 
+2026-09-15 15:01:20,313 37268 DEBUG ? odoo.modules.loading: Module purchase loaded in 0.03s, 0 queries 
+2026-09-15 15:01:20,313 37268 DEBUG ? odoo.modules.loading: Loading module snailmail_account (106/201) 
+2026-09-15 15:01:20,324 37268 DEBUG ? odoo.modules.loading: Module snailmail_account loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,324 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_account (107/201) 
+2026-09-15 15:01:20,331 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_account loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,332 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_account (108/201) 
+2026-09-15 15:01:20,334 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,334 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_im_livechat (109/201) 
+2026-09-15 15:01:20,336 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_im_livechat loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,336 37268 DEBUG ? odoo.modules.loading: Loading module stock_account (110/201) 
+2026-09-15 15:01:20,371 37268 DEBUG ? odoo.modules.loading: Module stock_account loaded in 0.03s, 0 queries 
+2026-09-15 15:01:20,371 37268 DEBUG ? odoo.modules.loading: Loading module stock_sms (111/201) 
+2026-09-15 15:01:20,384 37268 DEBUG ? odoo.modules.loading: Module stock_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,384 37268 DEBUG ? odoo.modules.loading: Loading module tender (112/201) 
+2026-09-15 15:01:20,397 37268 WARNING ? odoo.api.create: The model odoo.addons.tender.models.tender_import is not overriding the create method in batch 
+2026-09-15 15:01:20,401 37268 DEBUG ? odoo.modules.loading: Module tender loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,402 37268 DEBUG ? odoo.modules.loading: Loading module website_crm (113/201) 
+2026-09-15 15:01:20,416 37268 DEBUG ? odoo.modules.loading: Module website_crm loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,416 37268 DEBUG ? odoo.modules.loading: Loading module website_form_project (114/201) 
+2026-09-15 15:01:20,420 37268 DEBUG ? odoo.modules.loading: Module website_form_project loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,420 37268 DEBUG ? odoo.modules.loading: Loading module website_jitsi (115/201) 
+2026-09-15 15:01:20,431 37268 DEBUG ? odoo.modules.loading: Module website_jitsi loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,431 37268 DEBUG ? odoo.modules.loading: Loading module website_links (116/201) 
+2026-09-15 15:01:20,440 37268 DEBUG ? odoo.modules.loading: Module website_links loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,440 37268 DEBUG ? odoo.modules.loading: Loading module website_livechat (117/201) 
+2026-09-15 15:01:20,464 37268 DEBUG ? odoo.modules.loading: Module website_livechat loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,465 37268 DEBUG ? odoo.modules.loading: Loading module website_mail (118/201) 
+2026-09-15 15:01:20,480 37268 DEBUG ? odoo.modules.loading: Module website_mail loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,480 37268 DEBUG ? odoo.modules.loading: Loading module website_mass_mailing (119/201) 
+2026-09-15 15:01:20,491 37268 DEBUG ? odoo.modules.loading: Module website_mass_mailing loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,491 37268 DEBUG ? odoo.modules.loading: Loading module website_partner (120/201) 
+2026-09-15 15:01:20,502 37268 DEBUG ? odoo.modules.loading: Module website_partner loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,502 37268 DEBUG ? odoo.modules.loading: Loading module website_sms (121/201) 
+2026-09-15 15:01:20,509 37268 DEBUG ? odoo.modules.loading: Module website_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,509 37268 DEBUG ? odoo.modules.loading: Loading module account_edi_ubl_cii (122/201) 
+2026-09-15 15:01:20,674 37268 DEBUG ? odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.16s, 0 queries 
+2026-09-15 15:01:20,674 37268 DEBUG ? odoo.modules.loading: Loading module crm_iap_enrich (123/201) 
+2026-09-15 15:01:20,683 37268 DEBUG ? odoo.modules.loading: Module crm_iap_enrich loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,683 37268 DEBUG ? odoo.modules.loading: Loading module crm_iap_mine (124/201) 
+2026-09-15 15:01:20,701 37268 DEBUG ? odoo.modules.loading: Module crm_iap_mine loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,701 37268 DEBUG ? odoo.modules.loading: Loading module hr_timesheet_attendance (125/201) 
+2026-09-15 15:01:20,710 37268 DEBUG ? odoo.modules.loading: Module hr_timesheet_attendance loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,710 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_crm_sms (126/201) 
+2026-09-15 15:01:20,716 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_crm_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,717 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_event_sms (127/201) 
+2026-09-15 15:01:20,722 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_event_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,722 37268 DEBUG ? odoo.modules.loading: Loading module project_hr_expense (128/201) 
+2026-09-15 15:01:20,727 37268 DEBUG ? odoo.modules.loading: Module project_hr_expense loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,727 37268 DEBUG ? odoo.modules.loading: Loading module project_purchase (129/201) 
+2026-09-15 15:01:20,735 37268 DEBUG ? odoo.modules.loading: Module project_purchase loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,736 37268 DEBUG ? odoo.modules.loading: Loading module project_timesheet_holidays (130/201) 
+2026-09-15 15:01:20,751 37268 DEBUG ? odoo.modules.loading: Module project_timesheet_holidays loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,751 37268 DEBUG ? odoo.modules.loading: Loading module purchase_stock (131/201) 
+2026-09-15 15:01:20,797 37268 DEBUG ? odoo.modules.loading: Module purchase_stock loaded in 0.05s, 0 queries 
+2026-09-15 15:01:20,797 37268 DEBUG ? odoo.modules.loading: Loading module sale (132/201) 
+2026-09-15 15:01:20,864 37268 DEBUG ? odoo.modules.loading: Module sale loaded in 0.07s, 0 queries 
+2026-09-15 15:01:20,864 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_hr_expense (133/201) 
+2026-09-15 15:01:20,867 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_hr_expense loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,867 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_hr_timesheet (134/201) 
+2026-09-15 15:01:20,869 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_hr_timesheet loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,869 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_purchase (135/201) 
+2026-09-15 15:01:20,871 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_purchase loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,872 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (136/201) 
+2026-09-15 15:01:20,875 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.00s, 0 queries 
+2026-09-15 15:01:20,875 37268 DEBUG ? odoo.modules.loading: Loading module website_crm_livechat (137/201) 
+2026-09-15 15:01:20,884 37268 DEBUG ? odoo.modules.loading: Module website_crm_livechat loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,884 37268 DEBUG ? odoo.modules.loading: Loading module website_crm_sms (138/201) 
+2026-09-15 15:01:20,889 37268 DEBUG ? odoo.modules.loading: Module website_crm_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,891 37268 DEBUG ? odoo.modules.loading: Loading module website_event (139/201) 
+2026-09-15 15:01:20,915 37268 DEBUG ? odoo.modules.loading: Module website_event loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,916 37268 DEBUG ? odoo.modules.loading: Loading module website_hr_recruitment (140/201) 
+2026-09-15 15:01:20,930 37268 DEBUG ? odoo.modules.loading: Module website_hr_recruitment loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,930 37268 DEBUG ? odoo.modules.loading: Loading module website_mass_mailing_sms (141/201) 
+2026-09-15 15:01:20,935 37268 DEBUG ? odoo.modules.loading: Module website_mass_mailing_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:20,935 37268 DEBUG ? odoo.modules.loading: Loading module website_payment (142/201) 
+2026-09-15 15:01:20,964 37268 DEBUG ? odoo.modules.loading: Module website_payment loaded in 0.03s, 0 queries 
+2026-09-15 15:01:20,964 37268 DEBUG ? odoo.modules.loading: Loading module website_profile (143/201) 
+2026-09-15 15:01:20,979 37268 DEBUG ? odoo.modules.loading: Module website_profile loaded in 0.02s, 0 queries 
+2026-09-15 15:01:20,980 37268 DEBUG ? odoo.modules.loading: Loading module asset_management (144/201) 
+2026-09-15 15:01:20,989 37268 WARNING ? odoo.api.create: The model odoo.addons.asset_management.models.asset_registration is not overriding the create method in batch 
+2026-09-15 15:01:20,995 37268 WARNING ? odoo.api.create: The model odoo.addons.asset_management.models.asset_history_techn is not overriding the create method in batch 
+2026-09-15 15:01:20,998 37268 WARNING ? odoo.api.create: The model odoo.addons.asset_management.models.asset_history_employee is not overriding the create method in batch 
+2026-09-15 15:01:21,001 37268 WARNING ? odoo.api.create: The model odoo.addons.asset_management.models.asset_operational_support is not overriding the create method in batch 
+2026-09-15 15:01:21,004 37268 WARNING ? odoo.api.create: The model odoo.addons.asset_management.models.asset_request is not overriding the create method in batch 
+2026-09-15 15:01:21,010 37268 DEBUG ? odoo.modules.loading: Module asset_management loaded in 0.03s, 0 queries 
+2026-09-15 15:01:21,010 37268 DEBUG ? odoo.modules.loading: Loading module cctz_forecast (145/201) 
+2026-09-15 15:01:21,033 37268 DEBUG ? odoo.modules.loading: Module cctz_forecast loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,033 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sale (146/201) 
+2026-09-15 15:01:21,040 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_sale loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,041 37268 DEBUG ? odoo.modules.loading: Loading module purchase_price_diff (147/201) 
+2026-09-15 15:01:21,048 37268 DEBUG ? odoo.modules.loading: Module purchase_price_diff loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,048 37268 DEBUG ? odoo.modules.loading: Loading module sale_crm (148/201) 
+2026-09-15 15:01:21,064 37268 DEBUG ? odoo.modules.loading: Module sale_crm loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,064 37268 DEBUG ? odoo.modules.loading: Loading module sale_management (149/201) 
+2026-09-15 15:01:21,093 37268 DEBUG ? odoo.modules.loading: Module sale_management loaded in 0.03s, 0 queries 
+2026-09-15 15:01:21,093 37268 DEBUG ? odoo.modules.loading: Loading module sale_product_configurator (150/201) 
+2026-09-15 15:01:21,102 37268 DEBUG ? odoo.modules.loading: Module sale_product_configurator loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,102 37268 DEBUG ? odoo.modules.loading: Loading module sale_purchase (151/201) 
+2026-09-15 15:01:21,118 37268 DEBUG ? odoo.modules.loading: Module sale_purchase loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,118 37268 DEBUG ? odoo.modules.loading: Loading module sale_sms (152/201) 
+2026-09-15 15:01:21,119 37268 DEBUG ? odoo.modules.loading: Module sale_sms loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,120 37268 DEBUG ? odoo.modules.loading: Loading module sale_stock (153/201) 
+2026-09-15 15:01:21,156 37268 DEBUG ? odoo.modules.loading: Module sale_stock loaded in 0.04s, 0 queries 
+2026-09-15 15:01:21,157 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_purchase_stock (154/201) 
+2026-09-15 15:01:21,159 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_purchase_stock loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,159 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_sale (155/201) 
+2026-09-15 15:01:21,163 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,163 37268 DEBUG ? odoo.modules.loading: Loading module website_crm_iap_reveal (156/201) 
+2026-09-15 15:01:21,181 37268 DEBUG ? odoo.modules.loading: Module website_crm_iap_reveal loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,181 37268 DEBUG ? odoo.modules.loading: Loading module website_event_crm (157/201) 
+2026-09-15 15:01:21,184 37268 DEBUG ? odoo.modules.loading: Module website_event_crm loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,184 37268 DEBUG ? odoo.modules.loading: Loading module website_event_jitsi (158/201) 
+2026-09-15 15:01:21,191 37268 DEBUG ? odoo.modules.loading: Module website_event_jitsi loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,191 37268 DEBUG ? odoo.modules.loading: Loading module website_event_track (159/201) 
+2026-09-15 15:01:21,228 37268 DEBUG ? odoo.modules.loading: Module website_event_track loaded in 0.04s, 0 queries 
+2026-09-15 15:01:21,229 37268 DEBUG ? odoo.modules.loading: Loading module website_forum (160/201) 
+2026-09-15 15:01:21,251 37268 DEBUG ? odoo.modules.loading: Module website_forum loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,251 37268 DEBUG ? odoo.modules.loading: Loading module website_sale (161/201) 
+2026-09-15 15:01:21,320 37268 DEBUG ? odoo.modules.loading: Module website_sale loaded in 0.07s, 0 queries 
+2026-09-15 15:01:21,321 37268 DEBUG ? odoo.modules.loading: Loading module website_slides (162/201) 
+2026-09-15 15:01:21,371 37268 DEBUG ? odoo.modules.loading: Module website_slides loaded in 0.05s, 0 queries 
+2026-09-15 15:01:21,372 37268 DEBUG ? odoo.modules.loading: Loading module custom_cctz (163/201) 
+2026-09-15 15:01:21,423 37268 WARNING ? odoo.models: The model market.category has no _description 
+2026-09-15 15:01:21,423 37268 WARNING ? odoo.models: The model customer.type has no _description 
+2026-09-15 15:01:21,429 37268 DEBUG ? odoo.modules.loading: Module custom_cctz loaded in 0.06s, 0 queries 
+2026-09-15 15:01:21,429 37268 DEBUG ? odoo.modules.loading: Loading module event_sale (164/201) 
+2026-09-15 15:01:21,464 37268 DEBUG ? odoo.modules.loading: Module event_sale loaded in 0.04s, 0 queries 
+2026-09-15 15:01:21,465 37268 DEBUG ? odoo.modules.loading: Loading module gamification_sale_crm (165/201) 
+2026-09-15 15:01:21,468 37268 DEBUG ? odoo.modules.loading: Module gamification_sale_crm loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,468 37268 DEBUG ? odoo.modules.loading: Loading module hr_skills_slides (166/201) 
+2026-09-15 15:01:21,478 37268 DEBUG ? odoo.modules.loading: Module hr_skills_slides loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,478 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_event_track (167/201) 
+2026-09-15 15:01:21,487 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_event_track loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,487 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_event_track_sms (168/201) 
+2026-09-15 15:01:21,493 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_event_track_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,493 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sale_sms (169/201) 
+2026-09-15 15:01:21,499 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_sale_sms loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,499 37268 DEBUG ? odoo.modules.loading: Loading module mass_mailing_slides (170/201) 
+2026-09-15 15:01:21,505 37268 DEBUG ? odoo.modules.loading: Module mass_mailing_slides loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,505 37268 DEBUG ? odoo.modules.loading: Loading module sale_expense (171/201) 
+2026-09-15 15:01:21,519 37268 DEBUG ? odoo.modules.loading: Module sale_expense loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,520 37268 DEBUG ? odoo.modules.loading: Loading module sale_margin (172/201) 
+2026-09-15 15:01:21,530 37268 DEBUG ? odoo.modules.loading: Module sale_margin loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,530 37268 DEBUG ? odoo.modules.loading: Loading module sale_project (173/201) 
+2026-09-15 15:01:21,558 37268 DEBUG ? odoo.modules.loading: Module sale_project loaded in 0.03s, 0 queries 
+2026-09-15 15:01:21,559 37268 DEBUG ? odoo.modules.loading: Loading module sale_purchase_stock (174/201) 
+2026-09-15 15:01:21,567 37268 DEBUG ? odoo.modules.loading: Module sale_purchase_stock loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,567 37268 DEBUG ? odoo.modules.loading: Loading module sale_quotation_builder (175/201) 
+2026-09-15 15:01:21,584 37268 DEBUG ? odoo.modules.loading: Module sale_quotation_builder loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,584 37268 DEBUG ? odoo.modules.loading: Loading module subscription_package (176/201) 
+2026-09-15 15:01:21,605 37268 WARNING ? odoo.api.create: The model odoo.addons.subscription_package.models.sale_order_line is not overriding the create method in batch 
+2026-09-15 15:01:21,615 37268 DEBUG ? odoo.modules.loading: Module subscription_package loaded in 0.03s, 0 queries 
+2026-09-15 15:01:21,616 37268 DEBUG ? odoo.modules.loading: Loading module website_event_meet (177/201) 
+2026-09-15 15:01:21,630 37268 DEBUG ? odoo.modules.loading: Module website_event_meet loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,631 37268 DEBUG ? odoo.modules.loading: Loading module website_event_track_live (178/201) 
+2026-09-15 15:01:21,649 37268 DEBUG ? odoo.modules.loading: Module website_event_track_live loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,649 37268 DEBUG ? odoo.modules.loading: Loading module website_event_track_quiz (179/201) 
+2026-09-15 15:01:21,664 37268 DEBUG ? odoo.modules.loading: Module website_event_track_quiz loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,664 37268 DEBUG ? odoo.modules.loading: Loading module website_sale_product_configurator (180/201) 
+2026-09-15 15:01:21,676 37268 DEBUG ? odoo.modules.loading: Module website_sale_product_configurator loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,676 37268 DEBUG ? odoo.modules.loading: Loading module website_sale_slides (181/201) 
+2026-09-15 15:01:21,689 37268 DEBUG ? odoo.modules.loading: Module website_sale_slides loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,690 37268 DEBUG ? odoo.modules.loading: Loading module website_sale_stock (182/201) 
+2026-09-15 15:01:21,705 37268 DEBUG ? odoo.modules.loading: Module website_sale_stock loaded in 0.02s, 0 queries 
+2026-09-15 15:01:21,705 37268 DEBUG ? odoo.modules.loading: Loading module website_slides_forum (183/201) 
+2026-09-15 15:01:21,713 37268 DEBUG ? odoo.modules.loading: Module website_slides_forum loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,713 37268 DEBUG ? odoo.modules.loading: Loading module website_slides_survey (184/201) 
+2026-09-15 15:01:21,728 37268 DEBUG ? odoo.modules.loading: Module website_slides_survey loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,728 37268 DEBUG ? odoo.modules.loading: Loading module cctz_contract_signing (185/201) 
+2026-09-15 15:01:21,733 37268 WARNING ? odoo.api.create: The model odoo.addons.cctz_contract_signing.models.contract_signing is not overriding the create method in batch 
+2026-09-15 15:01:21,735 37268 WARNING ? odoo.api.create: The model odoo.addons.cctz_contract_signing.models.contract_approval is not overriding the create method in batch 
+2026-09-15 15:01:21,737 37268 DEBUG ? odoo.modules.loading: Module cctz_contract_signing loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,737 37268 DEBUG ? odoo.modules.loading: Loading module event_crm_sale (186/201) 
+2026-09-15 15:01:21,741 37268 DEBUG ? odoo.modules.loading: Module event_crm_sale loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,741 37268 DEBUG ? odoo.modules.loading: Loading module payment_voucher (187/201) 
+2026-09-15 15:01:21,748 37268 WARNING ? odoo.api.create: The model odoo.addons.payment_voucher.models.payment_voucher is not overriding the create method in batch 
+2026-09-15 15:01:21,751 37268 DEBUG ? odoo.modules.loading: Module payment_voucher loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,752 37268 DEBUG ? odoo.modules.loading: Loading module project_sale_expense (188/201) 
+2026-09-15 15:01:21,757 37268 DEBUG ? odoo.modules.loading: Module project_sale_expense loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,757 37268 DEBUG ? odoo.modules.loading: Loading module sale_expense_margin (189/201) 
+2026-09-15 15:01:21,762 37268 DEBUG ? odoo.modules.loading: Module sale_expense_margin loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,762 37268 DEBUG ? odoo.modules.loading: Loading module sale_project_stock (190/201) 
+2026-09-15 15:01:21,767 37268 DEBUG ? odoo.modules.loading: Module sale_project_stock loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,767 37268 DEBUG ? odoo.modules.loading: Loading module sale_stock_margin (191/201) 
+2026-09-15 15:01:21,771 37268 DEBUG ? odoo.modules.loading: Module sale_stock_margin loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,771 37268 DEBUG ? odoo.modules.loading: Loading module sale_timesheet (192/201) 
+2026-09-15 15:01:21,805 37268 DEBUG ? odoo.modules.loading: Module sale_timesheet loaded in 0.03s, 0 queries 
+2026-09-15 15:01:21,805 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_event_sale (193/201) 
+2026-09-15 15:01:21,807 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_event_sale loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,807 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_sale_expense (194/201) 
+2026-09-15 15:01:21,809 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_sale_expense loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,809 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_website_sale_slides (195/201) 
+2026-09-15 15:01:21,811 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_website_sale_slides loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,811 37268 DEBUG ? odoo.modules.loading: Loading module test_website_slides_full (196/201) 
+2026-09-15 15:01:21,813 37268 DEBUG ? odoo.modules.loading: Module test_website_slides_full loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,813 37268 DEBUG ? odoo.modules.loading: Loading module website_event_meet_quiz (197/201) 
+2026-09-15 15:01:21,820 37268 DEBUG ? odoo.modules.loading: Module website_event_meet_quiz loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,820 37268 DEBUG ? odoo.modules.loading: Loading module website_event_track_live_quiz (198/201) 
+2026-09-15 15:01:21,828 37268 DEBUG ? odoo.modules.loading: Module website_event_track_live_quiz loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,828 37268 DEBUG ? odoo.modules.loading: Loading module website_sale_stock_product_configurator (199/201) 
+2026-09-15 15:01:21,831 37268 DEBUG ? odoo.modules.loading: Module website_sale_stock_product_configurator loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,831 37268 DEBUG ? odoo.modules.loading: Loading module sale_timesheet_margin (200/201) 
+2026-09-15 15:01:21,837 37268 DEBUG ? odoo.modules.loading: Module sale_timesheet_margin loaded in 0.01s, 0 queries 
+2026-09-15 15:01:21,837 37268 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_sale_timesheet (201/201) 
+2026-09-15 15:01:21,840 37268 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_sale_timesheet loaded in 0.00s, 0 queries 
+2026-09-15 15:01:21,840 37268 INFO ? odoo.modules.loading: 201 modules loaded in 10.07s, 0 queries (+0 extra) 
+2026-09-15 15:01:22,057 37268 WARNING ? odoo.fields: project.update.status: selection=[('on_track', 'Completed'), ('at_risk', 'In-Progress')] overrides existing selection; use selection_add instead 
+2026-09-15 15:01:22,060 37268 WARNING ? odoo.fields: project.project.last_update_status: selection=[('on_track', 'Completed'), ('at_risk', 'In-Progress')] overrides existing selection; use selection_add instead 
+2026-09-15 15:01:22,093 37268 WARNING ? odoo.fields: asset.move.employee.asset_status: selection attribute will be ignored as the field is related 
+2026-09-15 15:01:22,138 37268 WARNING ? odoo.fields: Field loan.form.state: unknown parameter 'track_visibility', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,164 37268 WARNING ? odoo.fields: Field warranty.request.state: unknown parameter 'track_visibility', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,183 37268 WARNING ? odoo.fields: Field tender.tender.business_unit with unknown comodel_name None 
+2026-09-15 15:01:22,184 37268 WARNING ? odoo.fields: Field tender.to.lead.wizard.business_unit with unknown comodel_name None 
+2026-09-15 15:01:22,185 37268 WARNING ? odoo.fields: Field sale.order.line.price_unit: unknown parameter 'tracking', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,187 37268 WARNING ? odoo.fields: Field asset.move.state_move: unknown parameter 'track_visibility', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,187 37268 WARNING ? odoo.fields: Field asset.operational.move.state: unknown parameter 'track_visibility', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,187 37268 WARNING ? odoo.fields: Field asset.operational.move.state: unknown parameter 'tracking', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,188 37268 WARNING ? odoo.fields: Field cctz.forecast.monthly.total_expected_revenue: unknown parameter 'currency_field', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,188 37268 WARNING ? odoo.fields: Field cctz.forecast.monthly.target_budget_amount: unknown parameter 'currency_field', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,189 37268 WARNING ? odoo.fields: Field cctz.forecast.monthly.target_budget_gp: unknown parameter 'currency_field', if this is an actual parameter you may want to override the method _valid_field_parameter on the relevant model in order to allow it 
+2026-09-15 15:01:22,330 37268 ERROR ? odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['contacts_custom_registry', 'invetory_custom', 'sales_custom'] 
+2026-09-15 15:01:22,333 37268 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-15 15:01:22,352 37268 INFO ? odoo.modules.registry: Registry loaded in 11.331s 
+2026-09-15 15:01:22,355 37268 DEBUG ? odoo.modules.registry: Multiprocess signaling check: [Registry - 840 -> 840] [Cache - 19062 -> 19062] 
+2026-09-15 15:01:22,365 37268 INFO testdb odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-09-15 15:01:22,367 37268 DEBUG testdb odoo.addons.website.models.ir_http: _generate_routing_rules for website: 1 
+2026-09-15 15:01:23,146 37268 WARNING testdb odoo.modules.registry: solution.portfolio: inconsistent 'compute_sudo' for computed fields: license_count, warranty_count, has_active_license, has_active_warranty 
+2026-09-15 15:01:23,184 37268 DEBUG testdb odoo.addons.http_routing.models.ir_http: '/' (lang: 'en') no lang in url and default website, continue 
+2026-09-15 15:01:23,528 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'cctz_hr', defaulting to LGPL-3 
+2026-09-15 15:01:23,539 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'project_report', defaulting to LGPL-3 
+2026-09-15 15:01:23,617 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'project_management_custom', defaulting to LGPL-3 
+2026-09-15 15:01:23,643 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'project_task_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:23,668 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'birthday_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:23,760 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'cctz_warranty', defaulting to LGPL-3 
+2026-09-15 15:01:23,822 37268 WARNING testdb odoo.modules.module: Missing `license` key in manifest for 'leave_reminder', defaulting to LGPL-3 
+2026-09-15 15:01:25,579 37268 INFO testdb odoo.addons.base.models.assetsbundle: Failed to find attachment for assets /web/assets/%-30407ff/1/web.assets_frontend_lazy.min.js 
+2026-09-15 15:01:27,616 37268 WARNING testdb py.warnings: C:\Users\deric\odoo\odoo\fields.py:807: UserWarning: Field 'loan.form.employee_id' in dependency of loan.form.employee_nida_number should be searchable. This is necessary to determine which records to recompute when hr.employee.identification_id is modified. You should either make the field searchable, or simplify the field dependency.
+  File "C:\Python310\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 342, in handle
+    BaseHTTPRequestHandler.handle(self)
+  File "C:\Python310\lib\http\server.py", line 433, in handle
+    self.handle_one_request()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 374, in handle_one_request
+    self.run_wsgi()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 999, in template_957_content
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2478, in _load_values
+    return get_value()
+  File "<957>", line 989, in template_957_t_cache_0_cache
+  File "<957>", line 525, in template_957_t_cache_0
+  File "c:\users\deric\odoo\addons\website\models\ir_qweb.py", line 122, in _get_asset_nodes
+    return super(IrQWeb, self_website)._get_asset_nodes(bundle, css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load, media=media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2450, in _get_asset_nodes
+    return self._generate_asset_nodes_cache(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "<decorator-gen-71>", line 2, in _generate_asset_nodes_cache
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2505, in _generate_asset_nodes_cache
+    return self._generate_asset_nodes(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2579, in _generate_asset_nodes
+    return remains + asset.to_node(css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 181, in to_node
+    js_attachment = self.js(is_minified=not is_debug_assets)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 430, in js
+    js_attachment = self.save_attachment(extension, content_bundle)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 373, in save_attachment
+    attachment = ira.with_user(SUPERUSER_ID).create(values)
+  File "<decorator-gen-285>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 430, in _model_create_multi
+    return create(self, [arg])
+  File "c:\users\deric\odoo\addons\hr_expense\models\ir_attachment.py", line 9, in create
+    attachments = super().create(vals_list)
+  File "<decorator-gen-267>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "c:\users\deric\odoo\addons\website\models\ir_attachment.py", line 23, in create
+    return super().create(vals_list)
+  File "<decorator-gen-60>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_attachment.py", line 673, in create
+    return super().create(vals_list)
+  File "<decorator-gen-68>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_fields.py", line 670, in create
+    recs = super().create(vals_list)
+  File "<decorator-gen-15>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4019, in create
+    records = self._create(data_list)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4250, in _create
+    records.modified(self._fields, create=True)
+  File "C:\Users\deric\odoo\odoo\models.py", line 6165, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "C:\Users\deric\odoo\odoo\models.py", line 6216, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 342, in get_trigger_tree
+    trees = [
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 345, in <listcomp>
+    if field in self._field_triggers
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 28, in __get__
+    value = self.fget(obj)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 439, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "C:\Users\deric\odoo\odoo\fields.py", line 807, in resolve_depends
+    warnings.warn(
+ 
+2026-09-15 15:01:27,619 37268 WARNING testdb py.warnings: C:\Users\deric\odoo\odoo\fields.py:807: UserWarning: Field 'loan.form.employee_id' in dependency of loan.form.parent_identification_number should be searchable. This is necessary to determine which records to recompute when hr.employee.parent_id is modified. You should either make the field searchable, or simplify the field dependency.
+  File "C:\Python310\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 342, in handle
+    BaseHTTPRequestHandler.handle(self)
+  File "C:\Python310\lib\http\server.py", line 433, in handle
+    self.handle_one_request()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 374, in handle_one_request
+    self.run_wsgi()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 999, in template_957_content
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2478, in _load_values
+    return get_value()
+  File "<957>", line 989, in template_957_t_cache_0_cache
+  File "<957>", line 525, in template_957_t_cache_0
+  File "c:\users\deric\odoo\addons\website\models\ir_qweb.py", line 122, in _get_asset_nodes
+    return super(IrQWeb, self_website)._get_asset_nodes(bundle, css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load, media=media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2450, in _get_asset_nodes
+    return self._generate_asset_nodes_cache(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "<decorator-gen-71>", line 2, in _generate_asset_nodes_cache
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2505, in _generate_asset_nodes_cache
+    return self._generate_asset_nodes(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2579, in _generate_asset_nodes
+    return remains + asset.to_node(css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 181, in to_node
+    js_attachment = self.js(is_minified=not is_debug_assets)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 430, in js
+    js_attachment = self.save_attachment(extension, content_bundle)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 373, in save_attachment
+    attachment = ira.with_user(SUPERUSER_ID).create(values)
+  File "<decorator-gen-285>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 430, in _model_create_multi
+    return create(self, [arg])
+  File "c:\users\deric\odoo\addons\hr_expense\models\ir_attachment.py", line 9, in create
+    attachments = super().create(vals_list)
+  File "<decorator-gen-267>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "c:\users\deric\odoo\addons\website\models\ir_attachment.py", line 23, in create
+    return super().create(vals_list)
+  File "<decorator-gen-60>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_attachment.py", line 673, in create
+    return super().create(vals_list)
+  File "<decorator-gen-68>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_fields.py", line 670, in create
+    recs = super().create(vals_list)
+  File "<decorator-gen-15>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4019, in create
+    records = self._create(data_list)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4250, in _create
+    records.modified(self._fields, create=True)
+  File "C:\Users\deric\odoo\odoo\models.py", line 6165, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "C:\Users\deric\odoo\odoo\models.py", line 6216, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 342, in get_trigger_tree
+    trees = [
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 345, in <listcomp>
+    if field in self._field_triggers
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 28, in __get__
+    value = self.fget(obj)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 439, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "C:\Users\deric\odoo\odoo\fields.py", line 807, in resolve_depends
+    warnings.warn(
+ 
+2026-09-15 15:01:27,624 37268 WARNING testdb py.warnings: C:\Users\deric\odoo\odoo\fields.py:807: UserWarning: Field 'loan.form.employee_id' in dependency of loan.form.loan_officer_name should be searchable. This is necessary to determine which records to recompute when hr.employee.parent_id is modified. You should either make the field searchable, or simplify the field dependency.
+  File "C:\Python310\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 342, in handle
+    BaseHTTPRequestHandler.handle(self)
+  File "C:\Python310\lib\http\server.py", line 433, in handle
+    self.handle_one_request()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 374, in handle_one_request
+    self.run_wsgi()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 999, in template_957_content
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2478, in _load_values
+    return get_value()
+  File "<957>", line 989, in template_957_t_cache_0_cache
+  File "<957>", line 525, in template_957_t_cache_0
+  File "c:\users\deric\odoo\addons\website\models\ir_qweb.py", line 122, in _get_asset_nodes
+    return super(IrQWeb, self_website)._get_asset_nodes(bundle, css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load, media=media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2450, in _get_asset_nodes
+    return self._generate_asset_nodes_cache(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "<decorator-gen-71>", line 2, in _generate_asset_nodes_cache
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2505, in _generate_asset_nodes_cache
+    return self._generate_asset_nodes(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2579, in _generate_asset_nodes
+    return remains + asset.to_node(css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 181, in to_node
+    js_attachment = self.js(is_minified=not is_debug_assets)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 430, in js
+    js_attachment = self.save_attachment(extension, content_bundle)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 373, in save_attachment
+    attachment = ira.with_user(SUPERUSER_ID).create(values)
+  File "<decorator-gen-285>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 430, in _model_create_multi
+    return create(self, [arg])
+  File "c:\users\deric\odoo\addons\hr_expense\models\ir_attachment.py", line 9, in create
+    attachments = super().create(vals_list)
+  File "<decorator-gen-267>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "c:\users\deric\odoo\addons\website\models\ir_attachment.py", line 23, in create
+    return super().create(vals_list)
+  File "<decorator-gen-60>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_attachment.py", line 673, in create
+    return super().create(vals_list)
+  File "<decorator-gen-68>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_fields.py", line 670, in create
+    recs = super().create(vals_list)
+  File "<decorator-gen-15>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4019, in create
+    records = self._create(data_list)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4250, in _create
+    records.modified(self._fields, create=True)
+  File "C:\Users\deric\odoo\odoo\models.py", line 6165, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "C:\Users\deric\odoo\odoo\models.py", line 6216, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 342, in get_trigger_tree
+    trees = [
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 345, in <listcomp>
+    if field in self._field_triggers
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 28, in __get__
+    value = self.fget(obj)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 439, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "C:\Users\deric\odoo\odoo\fields.py", line 807, in resolve_depends
+    warnings.warn(
+ 
+2026-09-15 15:01:27,627 37268 WARNING testdb py.warnings: C:\Users\deric\odoo\odoo\fields.py:807: UserWarning: Field 'loan.form.employee_id' in dependency of loan.form.loan_officer_department should be searchable. This is necessary to determine which records to recompute when hr.employee.loan_officer_id is modified. You should either make the field searchable, or simplify the field dependency.
+  File "C:\Python310\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 342, in handle
+    BaseHTTPRequestHandler.handle(self)
+  File "C:\Python310\lib\http\server.py", line 433, in handle
+    self.handle_one_request()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 374, in handle_one_request
+    self.run_wsgi()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 999, in template_957_content
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2478, in _load_values
+    return get_value()
+  File "<957>", line 989, in template_957_t_cache_0_cache
+  File "<957>", line 525, in template_957_t_cache_0
+  File "c:\users\deric\odoo\addons\website\models\ir_qweb.py", line 122, in _get_asset_nodes
+    return super(IrQWeb, self_website)._get_asset_nodes(bundle, css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load, media=media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2450, in _get_asset_nodes
+    return self._generate_asset_nodes_cache(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "<decorator-gen-71>", line 2, in _generate_asset_nodes_cache
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2505, in _generate_asset_nodes_cache
+    return self._generate_asset_nodes(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2579, in _generate_asset_nodes
+    return remains + asset.to_node(css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 181, in to_node
+    js_attachment = self.js(is_minified=not is_debug_assets)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 430, in js
+    js_attachment = self.save_attachment(extension, content_bundle)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 373, in save_attachment
+    attachment = ira.with_user(SUPERUSER_ID).create(values)
+  File "<decorator-gen-285>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 430, in _model_create_multi
+    return create(self, [arg])
+  File "c:\users\deric\odoo\addons\hr_expense\models\ir_attachment.py", line 9, in create
+    attachments = super().create(vals_list)
+  File "<decorator-gen-267>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "c:\users\deric\odoo\addons\website\models\ir_attachment.py", line 23, in create
+    return super().create(vals_list)
+  File "<decorator-gen-60>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_attachment.py", line 673, in create
+    return super().create(vals_list)
+  File "<decorator-gen-68>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_fields.py", line 670, in create
+    recs = super().create(vals_list)
+  File "<decorator-gen-15>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4019, in create
+    records = self._create(data_list)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4250, in _create
+    records.modified(self._fields, create=True)
+  File "C:\Users\deric\odoo\odoo\models.py", line 6165, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "C:\Users\deric\odoo\odoo\models.py", line 6216, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 342, in get_trigger_tree
+    trees = [
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 345, in <listcomp>
+    if field in self._field_triggers
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 28, in __get__
+    value = self.fget(obj)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 439, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "C:\Users\deric\odoo\odoo\fields.py", line 807, in resolve_depends
+    warnings.warn(
+ 
+2026-09-15 15:01:27,630 37268 WARNING testdb py.warnings: C:\Users\deric\odoo\odoo\fields.py:807: UserWarning: Field 'loan.form.employee_id' in dependency of loan.form.loan_officer_address should be searchable. This is necessary to determine which records to recompute when hr.employee.loan_officer_id is modified. You should either make the field searchable, or simplify the field dependency.
+  File "C:\Python310\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 342, in handle
+    BaseHTTPRequestHandler.handle(self)
+  File "C:\Python310\lib\http\server.py", line 433, in handle
+    self.handle_one_request()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 374, in handle_one_request
+    self.run_wsgi()
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\deric\odoo\.venv\lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 999, in template_957_content
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2478, in _load_values
+    return get_value()
+  File "<957>", line 989, in template_957_t_cache_0_cache
+  File "<957>", line 525, in template_957_t_cache_0
+  File "c:\users\deric\odoo\addons\website\models\ir_qweb.py", line 122, in _get_asset_nodes
+    return super(IrQWeb, self_website)._get_asset_nodes(bundle, css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load, media=media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2450, in _get_asset_nodes
+    return self._generate_asset_nodes_cache(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "<decorator-gen-71>", line 2, in _generate_asset_nodes_cache
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2505, in _generate_asset_nodes_cache
+    return self._generate_asset_nodes(bundle, css, js, debug, async_load, defer_load, lazy_load, media)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 2579, in _generate_asset_nodes
+    return remains + asset.to_node(css=css, js=js, debug=debug, async_load=async_load, defer_load=defer_load, lazy_load=lazy_load)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 181, in to_node
+    js_attachment = self.js(is_minified=not is_debug_assets)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 430, in js
+    js_attachment = self.save_attachment(extension, content_bundle)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\assetsbundle.py", line 373, in save_attachment
+    attachment = ira.with_user(SUPERUSER_ID).create(values)
+  File "<decorator-gen-285>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 430, in _model_create_multi
+    return create(self, [arg])
+  File "c:\users\deric\odoo\addons\hr_expense\models\ir_attachment.py", line 9, in create
+    attachments = super().create(vals_list)
+  File "<decorator-gen-267>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "c:\users\deric\odoo\addons\website\models\ir_attachment.py", line 23, in create
+    return super().create(vals_list)
+  File "<decorator-gen-60>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_attachment.py", line 673, in create
+    return super().create(vals_list)
+  File "<decorator-gen-68>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_fields.py", line 670, in create
+    recs = super().create(vals_list)
+  File "<decorator-gen-15>", line 2, in create
+  File "C:\Users\deric\odoo\odoo\api.py", line 431, in _model_create_multi
+    return create(self, arg)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4019, in create
+    records = self._create(data_list)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4250, in _create
+    records.modified(self._fields, create=True)
+  File "C:\Users\deric\odoo\odoo\models.py", line 6165, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "C:\Users\deric\odoo\odoo\models.py", line 6216, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 342, in get_trigger_tree
+    trees = [
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 345, in <listcomp>
+    if field in self._field_triggers
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 28, in __get__
+    value = self.fget(obj)
+  File "C:\Users\deric\odoo\odoo\modules\registry.py", line 439, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "C:\Users\deric\odoo\odoo\fields.py", line 807, in resolve_depends
+    warnings.warn(
+ 
+2026-09-15 15:01:27,725 37268 INFO testdb odoo.addons.base.models.assetsbundle: Deleting ir.attachment [5656] (from bundle web.assets_frontend_lazy) 
+2026-09-15 15:01:28,288 37268 ERROR testdb odoo.addons.base.models.ir_model: Missing model crm.lead.bu.allocation 
+2026-09-15 15:01:28,289 37268 ERROR testdb odoo.addons.base.models.ir_model: Missing model crm.lead.presale.allocation 
+2026-09-15 15:01:28,570 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (7306)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:01:28,576 37268 ERROR testdb odoo.sql_db: bad query: 
+            SELECT m.model
+              FROM ir_model_access a
+              JOIN ir_model m ON (m.id = a.model_id)
+             WHERE a.perm_read
+               AND a.active
+               AND (
+                    a.group_id IS NULL OR
+                    -- use subselect fo force a better query plan. See #99695 --
+                    a.group_id IN (
+                        SELECT gu.gid
+                            FROM res_groups_users_rel gu
+                            WHERE gu.uid = 861
+                    )
+                )
+            GROUP BY m.model
+        
+ERROR: current transaction is aborted, commands ignored until end of transaction block
+ 
+2026-09-15 15:01:28,578 37268 ERROR testdb odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 861
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(861,).name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 7306
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(7306,).name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<488>", line 109, in template_488_t_nocache_0
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 1244, in template_957_content
+  File "<488>", line 178, in template_488_t_nocache_0
+odoo.addons.base.models.ir_qweb.QWebException: Error while render the template
+UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+Template: portal.user_dropdown
+Path: /t/t/li/a/span
+Node: <span t-if="_user_name" t-attf-class="#{_user_name_class}" t-esc="user_id.name[:23] + \'...\' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 85, in lookup
+    r = d[key]
+  File "<decorator-gen-8>", line 2, in __getitem__
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: ('res.lang', <function Lang._get_cached_values at 0x00000263602AE4D0>, 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.lang(1,).code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 85, in lookup
+    r = d[key]
+  File "<decorator-gen-8>", line 2, in __getitem__
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: ('ir.model.access', <function IrModelAccess._get_allowed_models at 0x000002635E9E0F70>, 861, 'read')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1854, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+  File "c:\users\deric\odoo\addons\http_routing\models\ir_http.py", line 641, in _handle_error
+    cls._frontend_pre_dispatch()
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 203, in _frontend_pre_dispatch
+    super()._frontend_pre_dispatch()
+  File "c:\users\deric\odoo\addons\http_routing\models\ir_http.py", line 580, in _frontend_pre_dispatch
+    request.update_context(lang=request.lang._get_cached('code'))
+  File "C:\Users\deric\odoo\odoo\addons\base\models\res_lang.py", line 263, in _get_cached
+    return self._get_cached_values()[field]
+  File "<decorator-gen-100>", line 2, in _get_cached_values
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\res_lang.py", line 257, in _get_cached_values
+    'code': self.code,
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3255, in _read
+    self.check_access_rights('read')
+  File "C:\Users\deric\odoo\odoo\models.py", line 3515, in check_access_rights
+    return self.env['ir.model.access'].check(self._name, operation, raise_exception)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_model.py", line 1888, in check
+    has_access = model in self._get_allowed_models(mode)
+  File "<decorator-gen-41>", line 2, in _get_allowed_models
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_model.py", line 1856, in _get_allowed_models
+    self.env.cr.execute(f"""
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-09-15 15:01:28,587 37268 INFO testdb werkzeug: 127.0.0.1 - - [15/Sep/2026 15:01:28] "GET / HTTP/1.1" 500 - 243 0.895 16.676
+2026-09-15 15:01:28,621 37268 DEBUG ? odoo.modules.registry: Multiprocess signaling check: [Registry - 840 -> 840] [Cache - 19062 -> 19062] 
+2026-09-15 15:01:28,649 37268 DEBUG testdb odoo.addons.http_routing.models.ir_http: '/' (lang: 'en') no lang in url and default website, continue 
+2026-09-15 15:01:30,643 37268 INFO testdb odoo.addons.base.models.assetsbundle: Failed to find attachment for assets /web/assets/%-30407ff/1/web.assets_frontend_lazy.min.js 
+2026-09-15 15:01:33,153 37268 INFO testdb odoo.addons.base.models.assetsbundle: Deleting ir.attachment [5656] (from bundle web.assets_frontend_lazy) 
+2026-09-15 15:01:33,295 37268 ERROR testdb odoo.addons.base.models.ir_model: Missing model crm.lead.bu.allocation 
+2026-09-15 15:01:33,296 37268 ERROR testdb odoo.addons.base.models.ir_model: Missing model crm.lead.presale.allocation 
+2026-09-15 15:01:33,543 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (7306)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:01:33,548 37268 ERROR testdb odoo.sql_db: bad query: 
+            SELECT m.model
+              FROM ir_model_access a
+              JOIN ir_model m ON (m.id = a.model_id)
+             WHERE a.perm_read
+               AND a.active
+               AND (
+                    a.group_id IS NULL OR
+                    -- use subselect fo force a better query plan. See #99695 --
+                    a.group_id IN (
+                        SELECT gu.gid
+                            FROM res_groups_users_rel gu
+                            WHERE gu.uid = 861
+                    )
+                )
+            GROUP BY m.model
+        
+ERROR: current transaction is aborted, commands ignored until end of transaction block
+ 
+2026-09-15 15:01:33,549 37268 ERROR testdb odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 861
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(861,).name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 7306
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(7306,).name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<488>", line 109, in template_488_t_nocache_0
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\http.py", line 1849, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\deric\odoo\odoo\service\model.py", line 153, in retrying
+    result = func()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1877, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1991, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 237, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_http.py", line 156, in _dispatch
+    result.flatten()
+  File "C:\Users\deric\odoo\odoo\tools\facade.py", line 83, in wrap_func
+    func(self._wrapped__, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\http.py", line 1213, in flatten
+    self.response.append(self.render())
+  File "C:\Users\deric\odoo\odoo\http.py", line 1205, in render
+    return request.env["ir.ui.view"]._render_template(self.template, self.qcontext)
+  File "c:\users\deric\odoo\addons\website\models\ir_ui_view.py", line 419, in _render_template
+    return super()._render_template(template, values=values)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_ui_view.py", line 2135, in _render_template
+    return self.env['ir.qweb']._render(template, values)
+  File "C:\Users\deric\odoo\odoo\tools\profiler.py", line 301, in _tracked_method_render
+    return method_render(self, template, values, **options)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_qweb.py", line 599, in _render
+    result = ''.join(rendering)
+  File "<955>", line 39, in template_955
+  File "<955>", line 28, in template_955_content
+  File "<957>", line 1424, in template_957
+  File "<957>", line 1244, in template_957_content
+  File "<488>", line 178, in template_488_t_nocache_0
+odoo.addons.base.models.ir_qweb.QWebException: Error while render the template
+UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+Template: portal.user_dropdown
+Path: /t/t/li/a/span
+Node: <span t-if="_user_name" t-attf-class="#{_user_name_class}" t-esc="user_id.name[:23] + \'...\' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 85, in lookup
+    r = d[key]
+  File "<decorator-gen-8>", line 2, in __getitem__
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: ('res.lang', <function Lang._get_cached_values at 0x00000263602AE4D0>, 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.lang(1,).code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 85, in lookup
+    r = d[key]
+  File "<decorator-gen-8>", line 2, in __getitem__
+  File "C:\Users\deric\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: ('ir.model.access', <function IrModelAccess._get_allowed_models at 0x000002635E9E0F70>, 861, 'read')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\http.py", line 2263, in __call__
+    response = request._serve_db()
+  File "C:\Users\deric\odoo\odoo\http.py", line 1854, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+  File "c:\users\deric\odoo\addons\http_routing\models\ir_http.py", line 641, in _handle_error
+    cls._frontend_pre_dispatch()
+  File "c:\users\deric\odoo\addons\website\models\ir_http.py", line 203, in _frontend_pre_dispatch
+    super()._frontend_pre_dispatch()
+  File "c:\users\deric\odoo\addons\http_routing\models\ir_http.py", line 580, in _frontend_pre_dispatch
+    request.update_context(lang=request.lang._get_cached('code'))
+  File "C:\Users\deric\odoo\odoo\addons\base\models\res_lang.py", line 263, in _get_cached
+    return self._get_cached_values()[field]
+  File "<decorator-gen-100>", line 2, in _get_cached_values
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\res_lang.py", line 257, in _get_cached_values
+    'code': self.code,
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3255, in _read
+    self.check_access_rights('read')
+  File "C:\Users\deric\odoo\odoo\models.py", line 3515, in check_access_rights
+    return self.env['ir.model.access'].check(self._name, operation, raise_exception)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_model.py", line 1888, in check
+    has_access = model in self._get_allowed_models(mode)
+  File "<decorator-gen-41>", line 2, in _get_allowed_models
+  File "C:\Users\deric\odoo\odoo\tools\cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_model.py", line 1856, in _get_allowed_models
+    self.env.cr.execute(f"""
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+2026-09-15 15:01:33,555 37268 INFO testdb werkzeug: 127.0.0.1 - - [15/Sep/2026 15:01:33] "GET / HTTP/1.1" 500 - 226 0.295 4.644
+2026-09-15 15:01:37,036 37268 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2026-09-15 15:01:37,045 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:01:37,181 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:01:37,182 37268 WARNING ? odoo.service.server: cron0 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+2026-09-15 15:01:38,129 37268 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2026-09-15 15:01:38,138 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:01:38,144 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:01:38,145 37268 WARNING ? odoo.service.server: cron1 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+2026-09-15 15:02:37,190 37268 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2026-09-15 15:02:37,196 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:02:37,201 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:02:37,202 37268 WARNING ? odoo.service.server: cron0 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+2026-09-15 15:02:39,166 37268 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2026-09-15 15:02:39,171 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:02:39,179 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:02:39,181 37268 WARNING ? odoo.service.server: cron1 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+2026-09-15 15:03:37,221 37268 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2026-09-15 15:03:37,227 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:03:37,233 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:03:37,235 37268 WARNING ? odoo.service.server: cron0 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+
+2026-09-15 15:03:40,211 37268 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2026-09-15 15:03:40,217 37268 DEBUG testdb odoo.addons.base.models.ir_cron: job 10 acquired 
+2026-09-15 15:03:40,224 37268 ERROR testdb odoo.sql_db: bad query: SELECT "res_partner"."id" AS "id", "res_partner"."website_meta_og_img" AS "website_meta_og_img", "res_partner"."seo_name"->>'en_US' AS "seo_name", "res_partner"."website_id" AS "website_id", "res_partner"."is_published" AS "is_published", "res_partner"."message_main_attachment_id" AS "message_main_attachment_id", "res_partner"."email_normalized" AS "email_normalized", "res_partner"."message_bounce" AS "message_bounce", "res_partner"."name" AS "name", "res_partner"."display_name" AS "display_name", "res_partner"."date" AS "date", "res_partner"."title" AS "title", "res_partner"."parent_id" AS "parent_id", "res_partner"."ref" AS "ref", "res_partner"."lang" AS "lang", "res_partner"."tz" AS "tz", "res_partner"."user_id" AS "user_id", "res_partner"."vat" AS "vat", "res_partner"."company_registry" AS "company_registry", "res_partner"."website" AS "website", "res_partner"."comment" AS "comment", "res_partner"."active" AS "active", "res_partner"."employee" AS "employee", "res_partner"."function" AS "function", "res_partner"."type" AS "type", "res_partner"."street" AS "street", "res_partner"."street2" AS "street2", "res_partner"."zip" AS "zip", "res_partner"."city" AS "city", "res_partner"."state_id" AS "state_id", "res_partner"."country_id" AS "country_id", "res_partner"."partner_latitude" AS "partner_latitude", "res_partner"."partner_longitude" AS "partner_longitude", "res_partner"."email" AS "email", "res_partner"."phone" AS "phone", "res_partner"."mobile" AS "mobile", "res_partner"."is_company" AS "is_company", "res_partner"."industry_id" AS "industry_id", "res_partner"."company_id" AS "company_id", "res_partner"."color" AS "color", "res_partner"."partner_share" AS "partner_share", "res_partner"."commercial_partner_id" AS "commercial_partner_id", "res_partner"."commercial_company_name" AS "commercial_company_name", "res_partner"."company_name" AS "company_name", "res_partner"."create_uid" AS "create_uid", "res_partner"."create_date" AS "create_date", "res_partner"."write_uid" AS "write_uid", "res_partner"."write_date" AS "write_date", "res_partner"."signup_type" AS "signup_type", "res_partner"."signup_expiration" AS "signup_expiration", "res_partner"."calendar_last_notif_ack" AS "calendar_last_notif_ack", "res_partner"."team_id" AS "team_id", "res_partner"."is_supported_customer" AS "is_supported_customer", "res_partner"."account_manager_id" AS "account_manager_id", "res_partner"."support_tier" AS "support_tier", "res_partner"."customer_since" AS "customer_since", "res_partner"."support_notes" AS "support_notes", "res_partner"."partner_gid" AS "partner_gid", "res_partner"."additional_info" AS "additional_info", "res_partner"."phone_sanitized" AS "phone_sanitized", "res_partner"."debit_limit" AS "debit_limit", "res_partner"."last_time_entries_checked" AS "last_time_entries_checked", "res_partner"."invoice_warn" AS "invoice_warn", "res_partner"."invoice_warn_msg" AS "invoice_warn_msg", "res_partner"."supplier_rank" AS "supplier_rank", "res_partner"."customer_rank" AS "customer_rank", "res_partner"."picking_warn" AS "picking_warn", "res_partner"."picking_warn_msg" AS "picking_warn_msg", "res_partner"."purchase_warn" AS "purchase_warn", "res_partner"."purchase_warn_msg" AS "purchase_warn_msg", "res_partner"."website_description"->>'en_US' AS "website_description", "res_partner"."website_short_description"->>'en_US' AS "website_short_description", "res_partner"."sale_warn" AS "sale_warn", "res_partner"."sale_warn_msg" AS "sale_warn_msg", "res_partner"."vrn_number" AS "vrn_number", "res_partner"."sector_id" AS "sector_id", "res_partner"."market_category_id" AS "market_category_id", "res_partner"."customer_type_id" AS "customer_type_id", "res_partner"."avg_payment_days" AS "avg_payment_days", "res_partner"."rating" AS "rating", "res_partner"."credit_risk_level" AS "credit_risk_level", "res_partner"."active_subscription" AS "active_subscription" FROM "res_partner" WHERE "res_partner".id IN (2)
+ERROR: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+ 
+2026-09-15 15:03:40,226 37268 WARNING ? odoo.service.server: cron1 encountered an Exception: 
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.users(1,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\api.py", line 1013, in get
+    cache_value = field_cache[record._ids[0]]
+KeyError: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1159, in __get__
+    value = env.cache.get(record, self)
+  File "C:\Users\deric\odoo\odoo\api.py", line 1020, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: 'res.partner(2,).tz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deric\odoo\odoo\service\server.py", line 495, in _run_cron
+    ir_cron._process_jobs(db_name)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 135, in _process_jobs
+    registry[cls._name]._process_job(db, cron_cr, job)
+  File "C:\Users\deric\odoo\odoo\addons\base\models\ir_cron.py", line 327, in _process_job
+    now = fields.Datetime.context_timestamp(ir_cron, datetime.utcnow())
+  File "C:\Users\deric\odoo\odoo\fields.py", line 2202, in context_timestamp
+    tz_name = record._context.get('tz') or record.env.user.tz
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1220, in __get__
+    self.compute_value(recs)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1402, in compute_value
+    records._compute_field_value(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 4276, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 101, in determine
+    return needle(records, *args)
+  File "C:\Users\deric\odoo\odoo\fields.py", line 700, in _compute_related
+    record[self.name] = self._process_related(value[self.related_field.name])
+  File "C:\Users\deric\odoo\odoo\models.py", line 6007, in __getitem__
+    return self._fields[key].__get__(self, self.env.registry[self._name])
+  File "C:\Users\deric\odoo\odoo\fields.py", line 1185, in __get__
+    recs._fetch_field(self)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3245, in _fetch_field
+    self._read(fnames)
+  File "C:\Users\deric\odoo\odoo\models.py", line 3322, in _read
+    cr.execute(query_str, params + [sub_ids])
+  File "C:\Users\deric\odoo\odoo\sql_db.py", line 324, in execute
+    res = self._obj.execute(query, params)
+psycopg2.errors.UndefinedColumn: column res_partner.rating does not exist
+LINE 1: ...artner"."avg_payment_days" AS "avg_payment_days", "res_partn...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "res_partner.lang".
+

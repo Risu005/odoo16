@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_task_report,access_project_task_report,project.model_project_task,project.group_project_user,1,1,1,0
+access_project_project_report,access_project_project_report,project.model_project_project,project.group_project_user,1,1,1,0
+access_project_business_unit_report_wizard,access_project_business_unit_report_wizard,model_project_business_unit_report_wizard,project.group_project_user,1,1,1,1

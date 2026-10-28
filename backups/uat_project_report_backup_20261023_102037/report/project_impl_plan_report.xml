@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- Report Action -->
+  <record id="task_impl_plan_sheet_pdf" model="ir.actions.report">
+    <field name="name">Project Implementation Plan</field>
+    <field name="model">project.task</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">project_report.task_impl_plan_sheet_template</field>
+    <field name="report_file">project_report.task_impl_plan_sheet_template</field>
+    <field name="binding_model_id" ref="project.model_project_task"/>
+    <field name="binding_type">report</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+  </record>
+
+  <!-- Template -->
+  <template id="task_impl_plan_sheet_template">
+    <t t-call="web.html_container">
+
+      <t t-set="today" t-value="datetime.datetime.now()"/>
+      <t t-set="today_date" t-value="context_timestamp(today).date()"/>
+
+      <t t-set="TITLE_GREEN"     t-value="'#7cc04b'"/>
+      <t t-set="HEADER_GREEN"    t-value="'#a1d48a'"/>
+      <t t-set="HEADER_BORDER"   t-value="'#5fa940'"/>
+      <t t-set="SECTION_FILL"    t-value="'#dbe5f1'"/>
+      <t t-set="GRID_BORDER"     t-value="'#b7d3a7'"/>
+
+      <!-- FILTER ONLY TASKS IN DEPLOYMENT STAGE -->
+      <t t-set="deployment_docs" t-value="docs.filtered(lambda t: t.stage_id and t.stage_id.name == 'Deployment')"/>
+
+      <t t-call="web.external_layout">
+        <main>
+
+          <div class="page" style="font-size:12px;">
+
+            <!-- Title band -->
+            <table style="width:100%; border-collapse:collapse; margin-bottom:8px;">
+              <colgroup>
+                <col style="width:48%"/>
+                <col style="width:12%"/>
+                <col style="width:14%"/>
+                <col style="width:14%"/>
+                <col style="width:12%"/>
+              </colgroup>
+              <tr>
+                <td colspan="5"
+                    t-attf-style="background-color: {{ TITLE_GREEN }}; color:#0c3a07; font-weight:800; font-size:20px; padding:10px 8px; border:1px solid {{ HEADER_BORDER }};">
+                  Project Implementation Plan
+                </td>
+              </tr>
+              <tr>
+                <th t-attf-style="text-align:left; background: {{ HEADER_GREEN }}; border:1px solid {{ HEADER_BORDER }}; padding:6px; font-weight:700;">Task Name</th>
+                <th t-attf-style="text-align:center; background: {{ HEADER_GREEN }}; border:1px solid {{ HEADER_BORDER }}; padding:6px; font-weight:700;">Duration (days)</th>
+                <th t-attf-style="text-align:center; background: {{ HEADER_GREEN }}; border:1px solid {{ HEADER_BORDER }}; padding:6px; font-weight:700;">Start Date</th>
+                <th t-attf-style="text-align:center; background: {{ HEADER_GREEN }}; border:1px solid {{ HEADER_BORDER }}; padding:6px; font-weight:700;">End Date</th>
+                <th t-attf-style="text-align:center; background: {{ HEADER_GREEN }}; border:1px solid {{ HEADER_BORDER }}; padding:6px; font-weight:700;">Status</th>
+              </tr>
+            </table>
+
+            <!-- If no Deployment tasks -->
+            <t t-if="not deployment_docs">
+              <table style="width:100%; border-collapse:collapse; margin-bottom:12px;">
+                <tr>
+                  <td t-attf-style="border:1px solid {{ GRID_BORDER }}; padding:8px; font-style:italic; color:#6c757d;">
+                    No tasks found in Deployment stage.
+                  </td>
+                </tr>
+              </table>
+            </t>
+
+            <!-- Deployment tasks -->
+            <t t-foreach="deployment_docs" t-as="section">
+
+              <div style="page-break-inside: avoid; margin-bottom:12px;">
+
+                <t t-set="sec_start_dt"
+                   t-value="section.report_start_date and datetime.datetime.combine(section.report_start_date, datetime.time.min) or (('planned_date_begin' in section._fields and section.planned_date_begin) or section.create_date or today)"/>
+                <t t-set="sec_end_dt"
+                   t-value="('planned_date_end' in section._fields and section.planned_date_end) or section.write_date or sec_start_dt"/>
+
+                <t t-if="section.date_deadline">
+                  <t t-set="sec_end_dt"
+                     t-value="datetime.datetime.combine(section.date_deadline, datetime.time.max)"/>
+                </t>
+
+                <t t-set="sec_days"
+                   t-value="((sec_end_dt.date() - sec_start_dt.date()).days + 1) if (sec_start_dt and sec_end_dt) else ''"/>
+
+                <table style="width:100%; border-collapse:collapse; margin-bottom:12px; page-break-inside: avoid;">
+                  <colgroup>
+                    <col style="width:48%"/>
+                    <col style="width:12%"/>
+                    <col style="width:14%"/>
+                    <col style="width:14%"/>
+                    <col style="width:12%"/>
+                  </colgroup>
+
+                  <tr t-attf-style="background: {{ SECTION_FILL }};">
+                    <td t-attf-style="border:1px solid {{ GRID_BORDER }}; padding:8px; font-weight:800; font-size:13px;">
+                      <t t-esc="section.name"/>
+                    </td>
+                    <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center; font-weight:700;">
+                      <t t-esc="sec_days"/>
+                    </td>
+                    <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                      <t t-esc="sec_start_dt and sec_start_dt.strftime('%d %b %Y') or ''"/>
+                    </td>
+                    <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                      <t t-esc="sec_end_dt and sec_end_dt.strftime('%d %b %Y') or ''"/>
+                    </td>
+                    <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center; font-weight:700;">
+                      <t t-if="section.kanban_state == 'done' or section.status == 'completed'">Completed</t>
+                      <t t-elif="section.kanban_state == 'blocked' or section.status == 'cancelled'">Blocked</t>
+                      <t t-elif="section.status == 'yet_to_commence' or (sec_start_dt and sec_start_dt.date() &gt; today_date)">Yet to commence</t>
+                      <t t-elif="section.status == 'not_started' and (not sec_start_dt or sec_start_dt.date() &gt;= today_date)">Yet to commence</t>
+                      <t t-else="">In Progress</t>
+                    </td>
+                  </tr>
+
+                  <!-- Only Deployment subtasks -->
+                  <t t-set="subs" t-value="section.child_ids.filtered(lambda s: s.stage_id and s.stage_id.name == 'Deployment')"/>
+                  <t t-if="subs">
+                    <t t-foreach="subs" t-as="sub">
+
+                      <t t-set="s_start_dt"
+                         t-value="sub.report_start_date and datetime.datetime.combine(sub.report_start_date, datetime.time.min) or (('planned_date_begin' in sub._fields and sub.planned_date_begin) or sub.create_date or today)"/>
+                      <t t-set="s_end_dt"
+                         t-value="('planned_date_end' in sub._fields and sub.planned_date_end) or sub.write_date or s_start_dt"/>
+
+                      <t t-if="sub.date_deadline">
+                        <t t-set="s_end_dt"
+                           t-value="datetime.datetime.combine(sub.date_deadline, datetime.time.max)"/>
+                      </t>
+
+                      <t t-set="s_days"
+                         t-value="((s_end_dt.date() - s_start_dt.date()).days + 1) if (s_start_dt and s_end_dt) else ''"/>
+
+                      <tr>
+                        <td t-attf-style="border:1px solid {{ GRID_BORDER }}; padding:6px 8px;">
+                          <t t-esc="sub.name"/>
+                        </td>
+                        <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                          <t t-esc="s_days"/>
+                        </td>
+                        <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                          <t t-esc="s_start_dt and s_start_dt.strftime('%d %b %Y') or ''"/>
+                        </td>
+                        <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                          <t t-esc="s_end_dt and s_end_dt.strftime('%d %b %Y') or ''"/>
+                        </td>
+                        <td t-attf-style="border:1px solid {{ GRID_BORDER }}; text-align:center;">
+                          <t t-if="sub.kanban_state == 'done' or sub.status == 'completed'">Completed</t>
+                          <t t-elif="sub.kanban_state == 'blocked' or sub.status == 'cancelled'">Blocked</t>
+                          <t t-elif="sub.status == 'yet_to_commence' or (s_start_dt and s_start_dt.date() &gt; today_date)">Yet to commence</t>
+                          <t t-elif="sub.status == 'not_started' and (not s_start_dt or s_start_dt.date() &gt;= today_date)">Yet to commence</t>
+                          <t t-else="">In Progress</t>
+                        </td>
+                      </tr>
+
+                    </t>
+                  </t>
+                  <t t-else="">
+                    <tr>
+                      <td colspan="5" t-attf-style="border:1px solid {{ GRID_BORDER }}; padding:6px; font-style:italic; color:#6c757d;">
+                        No subtasks under this task in Deployment stage.
+                      </td>
+                    </tr>
+                  </t>
+
+                </table>
+
+              </div>
+
+            </t>
+
+          </div>
+
+        </main>
+      </t>
+    </t>
+  </template>
+
+</odoo>

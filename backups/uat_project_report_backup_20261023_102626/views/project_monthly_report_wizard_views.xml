@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- =========================
+         Monthly Project Report Wizard Form (Monthly Only)
+    ========================== -->
+    <record id="view_project_monthly_report_wizard_form" model="ir.ui.view">
+        <field name="name">project.monthly.report.wizard.form</field>
+        <field name="model">project.monthly.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Monthly Project Report">
+                <sheet>
+                    <field name="report_period" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="month" required="1"/>
+                            <field name="year" required="1"/>
+                        </group>
+                        <group>
+                            <field name="report_category" widget="radio"/>
+                        </group>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="action_print_report"
+                            string="Print Monthly Project Report"
+                            type="object"
+                            class="btn-primary"
+                            icon="fa-print"/>
+
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- =========================
+         Weekly Project Report Wizard Form (Weekly Only)
+    ========================== -->
+    <record id="view_project_weekly_report_wizard_form" model="ir.ui.view">
+        <field name="name">project.weekly.report.wizard.form</field>
+        <field name="model">project.monthly.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Weekly Project Report">
+                <sheet>
+                    <field name="report_period" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="reference_date"/>
+                            <field name="week_start_date" required="1"/>
+                            <field name="week_end_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="report_category" widget="radio"/>
+                        </group>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="action_print_report"
+                            string="Print Weekly Project Report"
+                            type="object"
+                            class="btn-primary"
+                            icon="fa-print"/>
+
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Weekly Project Report Wizard Action -->
+    <record id="action_project_weekly_report_wizard"
+            model="ir.actions.act_window">
+        <field name="name">Weekly Project Report</field>
+        <field name="res_model">project.monthly.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_project_weekly_report_wizard_form"/>
+        <field name="target">new</field>
+        <field name="context">{'default_report_period': 'weekly'}</field>
+        <field name="binding_model_id" ref="project.model_project_project"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Monthly Project Report Wizard Action -->
+    <record id="action_project_monthly_report_wizard"
+            model="ir.actions.act_window">
+        <field name="name">Monthly Project Report</field>
+        <field name="res_model">project.monthly.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_project_monthly_report_wizard_form"/>
+        <field name="target">new</field>
+        <field name="context">{'default_report_period': 'monthly'}</field>
+        <field name="binding_model_id" ref="project.model_project_project"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <menuitem id="menu_project_weekly_report"
+              name="Weekly Project Report"
+              parent="project.menu_project_report"
+              action="action_project_weekly_report_wizard"
+              sequence="15"/>
+
+    <menuitem id="menu_project_monthly_report"
+              name="Monthly Project Report"
+              parent="project.menu_project_report"
+              action="action_project_monthly_report_wizard"
+              sequence="20"/>
+
+</odoo>

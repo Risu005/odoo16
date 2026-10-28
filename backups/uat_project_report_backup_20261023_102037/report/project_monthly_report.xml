@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- =========================
+         Monthly Task Report Action
+    ========================== -->
+    <record id="task_monthly_report_pdf" model="ir.actions.report">
+        <field name="name">Monthly Task Report</field>
+        <field name="model">project.task</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">project_report.task_monthly_report_template</field>
+        <field name="report_file">project_report.task_monthly_report_template</field>
+        <field name="binding_model_id" ref="project.model_project_task"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <!-- =========================
+         Monthly Task Report Template
+    ========================== -->
+    <template id="task_monthly_report_template">
+        <t t-call="web.html_container">
+            <!-- Compute current month range -->
+            <t t-set="today" t-value="datetime.datetime.now()"/>
+            <t t-set="month_start" t-value="today.replace(day=1)"/>
+            <t t-set="next_month" t-value="(month_start + datetime.timedelta(days=32)).replace(day=1)"/>
+            <t t-set="month_end" t-value="next_month - datetime.timedelta(days=1)"/>
+            <t t-set="processed_projects" t-value="[]"/>
+
+            <t t-foreach="docs" t-as="task">
+                <t t-set="current_project_id" t-value="task.project_id.id if task.project_id else 0"/>
+
+                <t t-if="current_project_id not in processed_projects">
+                    <t t-set="processed_projects" t-value="processed_projects + [current_project_id]"/>
+                    <t t-set="project_tasks" t-value="docs.filtered(lambda t: (t.project_id.id if t.project_id else 0) == current_project_id)"/>
+                    <t t-set="first_task" t-value="project_tasks[0]"/>
+
+                    <t t-call="web.external_layout">
+                        <div class="page" style="font-size: 12px;">
+                            <div class="oe_structure"/>
+
+                            <!-- Report Title -->
+                            <h2 style="text-align: center; margin-bottom: 20px; font-size: 30px; font-weight: bold;">
+                                Monthly Report (<t t-esc="month_start.strftime('%d %b %Y')"/> - <t t-esc="month_end.strftime('%d %b %Y')"/>)
+                            </h2>
+
+                            <!-- Header -->
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <table class="table table-sm table-borderless" style="border: 1px solid #dee2e6; font-size: 11px;">
+                                        <thead>
+                                            <tr style="background-color: #f8f9fa;">
+                                                <th style="border: 1px solid #dee2e6; padding: 6px; width: 22%;">DESCRIPTION</th>
+                                                <th style="border: 1px solid #dee2e6; padding: 6px; width: 78%;">DETAILS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Customer Contact:</td>
+                                                <td style="border: 1px solid #dee2e6;"><t t-esc="first_task.partner_id.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Project Title:</td>
+                                                <td style="border: 1px solid #dee2e6;"><t t-esc="first_task.project_id.name if first_task.project_id else 'No Project'"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Project ID:</td>
+                                                <td style="border: 1px solid #dee2e6;"><t t-esc="first_task.get_project_id_code()"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Project Manager:</td>
+                                                <td style="border: 1px solid #dee2e6;"><t t-esc="first_task.project_id.user_id.name if first_task.project_id and first_task.project_id.user_id else 'Not assigned'"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Engineer(s) Assigned:</td>
+                                                <td style="border: 1px solid #dee2e6;">
+                                                    <t t-set="all_engineers" t-value="', '.join(set(sum([t.user_ids.mapped('name') for t in project_tasks], [])))"/>
+                                                    <t t-if="all_engineers">
+                                                        <t t-esc="all_engineers"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">No engineers assigned</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold;">Project Start Date:</td>
+                                                <td style="border: 1px solid #dee2e6;">
+                                                    <t t-set="project_start_dates" t-value="project_tasks.filtered(lambda t: t.report_start_date).mapped('report_start_date')"/>
+                                                    <t t-if="project_start_dates">
+                                                        <t t-esc="min(project_start_dates).strftime('%d %b %Y')"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">Not set</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Tasks Completed This Month -->
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold; vertical-align: top;">
+                                                    Tasks Completed This Month:
+                                                </td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-set="monthly_done_tasks"
+                                                       t-value="project_tasks.filtered(lambda s: s.kanban_state == 'done' and s.write_date and month_start &lt;= s.write_date &lt;= month_end)"/>
+
+                                                    <t t-if="monthly_done_tasks">
+                                                        <t t-foreach="monthly_done_tasks" t-as="main_task">
+                                                            <t t-set="done_subtasks"
+                                                               t-value="main_task.child_ids.filtered(lambda s: s.kanban_state == 'done' and s.write_date and month_start &lt;= s.write_date &lt;= month_end)"/>
+
+                                                            <div style="margin-bottom: 10px;">
+                                                                <strong><t t-esc="main_task.name"/></strong>
+                                                                <span style="font-size: 11px; color: #6c757d;">
+                                                                    <t t-if="main_task.report_start_date">
+                                                                        (Started on <t t-esc="main_task.report_start_date.strftime('%d %b %Y')"/>)
+                                                                    </t>
+                                                                    <t t-if="main_task.write_date">
+                                                                        <t t-if="main_task.report_start_date"> | </t>
+                                                                        (Completed on <t t-esc="main_task.write_date.strftime('%d %b %Y')"/>)
+                                                                    </t>
+                                                                </span>
+
+                                                                <t t-if="done_subtasks">
+                                                                    <table style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; margin-top: 5px;">
+                                                                        <tr style="background-color: #f8f9fa;">
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Subtask</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Start Date</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Completed On</th>
+                                                                        </tr>
+                                                                        <t t-foreach="done_subtasks" t-as="sub">
+                                                                            <tr>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.name"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.report_start_date and sub.report_start_date.strftime('%d %b %Y') or 'Not set'"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.write_date and sub.write_date.strftime('%d %b %Y') or ''"/>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </t>
+                                                                    </table>
+                                                                </t>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted">No tasks completed this month.</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Next Action Items -->
+                                            <tr>
+                                                <td style="border: 1px solid #dee2e6; font-weight: bold; vertical-align: top;">Next Action Items:</td>
+                                                <td style="border: 1px solid #dee2e6; padding: 6px;">
+                                                    <t t-foreach="project_tasks" t-as="main_task">
+                                                        <t t-set="pending_subtasks" t-value="main_task.child_ids.filtered(lambda s: s.kanban_state != 'done')"/>
+                                                        <t t-if="main_task.kanban_state != 'done' or pending_subtasks">
+                                                            <div style="margin-bottom: 10px;">
+                                                                <strong><t t-esc="main_task.name"/></strong>
+                                                                <t t-if="main_task.report_start_date">
+                                                                    <span style="font-size: 11px; color: #6c757d;">
+                                                                        (Start Date: <t t-esc="main_task.report_start_date.strftime('%d %b %Y')"/>)
+                                                                    </span>
+                                                                </t>
+                                                                <t t-if="pending_subtasks">
+                                                                    <table style="width: 100%; border: 1px solid #dee2e6; border-collapse: collapse; margin-top: 5px;">
+                                                                        <tr style="background-color: #f8f9fa;">
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Subtask</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Start Date</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Deadline</th>
+                                                                            <th style="border: 1px solid #dee2e6; padding: 4px; font-size: 10px;">Status</th>
+                                                                        </tr>
+                                                                        <t t-foreach="pending_subtasks" t-as="sub">
+                                                                            <tr>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;"><t t-esc="sub.name"/></td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-esc="sub.report_start_date and sub.report_start_date.strftime('%d %b %Y') or 'Not set'"/>
+                                                                                </td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;"><t t-esc="sub.date_deadline and sub.date_deadline.strftime('%d %b %Y') or 'No deadline'"/></td>
+                                                                                <td style="border: 1px solid #dee2e6; padding: 4px;">
+                                                                                    <t t-if="sub.kanban_state == 'blocked' or sub.status == 'cancelled'">Blocked</t>
+                                                                                    <t t-elif="sub.kanban_state == 'done' or sub.status == 'completed'">Completed</t>
+                                                                                    <t t-elif="sub.status == 'yet_to_commence' or (sub.report_start_date and sub.report_start_date &gt; context_timestamp(datetime.datetime.now()).date())">Yet to commence</t>
+                                                                                    <t t-elif="sub.status == 'not_started' and (not sub.report_start_date or sub.report_start_date &gt;= context_timestamp(datetime.datetime.now()).date())">Yet to commence</t>
+                                                                                    <t t-else="">In Progress</t>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </t>
+                                                                    </table>
+                                                                </t>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Customer Actions -->
+                                            <tr>
+                                                <td style="border:1px solid #dee2e6; font-weight:bold; vertical-align:top;">Action Required from Customer:</td>
+                                                <td style="border:1px solid #dee2e6; padding:6px;">
+                                                    <t t-set="has_customer_actions" t-value="False"/>
+                                                    <t t-foreach="project_tasks" t-as="ptask">
+                                                        <t t-set="customer_action" t-value="ptask.get_customer_actions_required()"/>
+                                                        <t t-if="customer_action and customer_action != 'No specific action required at this time'">
+                                                            <t t-set="has_customer_actions" t-value="True"/>
+                                                            • <t t-esc="customer_action"/><br/>
+                                                        </t>
+                                                    </t>
+                                                    <t t-if="not has_customer_actions">
+                                                        <span class="text-muted">No specific action required at this time</span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="row" style="margin-top:auto;">
+                                <div class="col-12 text-center">
+                                    <p class="text-muted" style="font-size:9px; margin-bottom:0;">
+                                        Report generated on <t t-esc="today.strftime('%d %B %Y at %I:%M %p')"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
